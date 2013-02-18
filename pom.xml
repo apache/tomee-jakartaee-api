@@ -29,12 +29,12 @@
   <artifactId>javaee-api</artifactId>
   <packaging>jar</packaging>
   <name>OpenEJB :: JavaEE Full API (zip and jar files)</name>
-  <version>6.0-5</version>
+  <version>6.0-5-SNAPSHOT</version>
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/tomee/javaee-api/tags/javaee-api-6.0-5</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/tomee/javaee-api/tags/javaee-api-6.0-5</developerConnection>
-    <url>http://svn.apache.org/viewvc/tomee/javaee-api/tags/javaee-api-6.0-5</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/tomee/javaee-api/trunk</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/tomee/javaee-api/trunk</developerConnection>
+    <url>http://svn.apache.org/viewvc/tomee/javaee-api/trunk</url>
   </scm>
 
   <build>
@@ -227,14 +227,6 @@
         </executions>
       </plugin>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>2.3.1</version>
-        <configuration>
-          <tagBase>https://svn.apache.org/repos/asf/tomee/javaee-api/tags/</tagBase>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
 
