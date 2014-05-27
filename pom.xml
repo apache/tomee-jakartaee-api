@@ -91,6 +91,8 @@
             </goals>
             <configuration>
               <createSourcesJar>true</createSourcesJar>
+              <useBaseVersion>true</useBaseVersion>
+              <createDependencyReducedPom>false</createDependencyReducedPom>
               <shadedArtifactAttached>true</shadedArtifactAttached>
               <shadedClassifierName>tomcat</shadedClassifierName>
               <artifactSet>
