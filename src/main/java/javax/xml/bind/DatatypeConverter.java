@@ -16,13 +16,13 @@
  */
 package javax.xml.bind;
 
-import java.util.Calendar;
-import java.math.BigInteger;
-import java.math.BigDecimal;
-
-import javax.xml.namespace.QName;
 import javax.xml.namespace.NamespaceContext;
+import javax.xml.namespace.QName;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Calendar;
 
+@SuppressWarnings("UnusedDeclaration")
 public final class DatatypeConverter {
 
     private static DatatypeConverterInterface converter = new DatatypeConverterImpl();
@@ -31,13 +31,13 @@ public final class DatatypeConverter {
         // no-op
     }
 
-    public static void setDatatypeConverter(DatatypeConverterInterface converter) {
+    public static void setDatatypeConverter(final DatatypeConverterInterface converter) {
         if (converter == null) {
             throw new IllegalArgumentException("The DatatypeConverterInterface parameter must not be null");
         }
         if (DatatypeConverter.converter == null) {
 
-            SecurityManager sm = System.getSecurityManager();
+            final SecurityManager sm = System.getSecurityManager();
             if (sm != null) {
                 sm.checkPermission(new JAXBPermission("setDatatypeConverter"));
             }
@@ -46,155 +46,155 @@ public final class DatatypeConverter {
         }
     }
 
-    public static String parseString(String lexicalXSDString) {
+    public static String parseString(final String lexicalXSDString) {
         return converter.parseString(lexicalXSDString);
     }
 
-    public static BigInteger parseInteger(String lexicalXSDInteger) {
+    public static BigInteger parseInteger(final String lexicalXSDInteger) {
         return converter.parseInteger(lexicalXSDInteger);
     }
 
-    public static int parseInt(String lexicalXSDInt) {
+    public static int parseInt(final String lexicalXSDInt) {
         return converter.parseInt(lexicalXSDInt);
     }
 
-    public static long parseLong(String lexicalXSDLong) {
+    public static long parseLong(final String lexicalXSDLong) {
         return converter.parseLong(lexicalXSDLong);
     }
 
-    public static short parseShort(String lexicalXSDShort) {
+    public static short parseShort(final String lexicalXSDShort) {
         return converter.parseShort(lexicalXSDShort);
     }
 
-    public static BigDecimal parseDecimal(String lexicalXSDDecimal) {
+    public static BigDecimal parseDecimal(final String lexicalXSDDecimal) {
         return converter.parseDecimal(lexicalXSDDecimal);
     }
 
-    public static float parseFloat(String lexicalXSDFloat) {
+    public static float parseFloat(final String lexicalXSDFloat) {
         return converter.parseFloat(lexicalXSDFloat);
     }
 
-    public static double parseDouble(String lexicalXSDDouble) {
+    public static double parseDouble(final String lexicalXSDDouble) {
         return converter.parseDouble(lexicalXSDDouble);
     }
 
-    public static boolean parseBoolean(String lexicalXSDBoolean) {
+    public static boolean parseBoolean(final String lexicalXSDBoolean) {
         return converter.parseBoolean(lexicalXSDBoolean);
     }
 
-    public static byte parseByte(String lexicalXSDByte) {
+    public static byte parseByte(final String lexicalXSDByte) {
         return converter.parseByte(lexicalXSDByte);
     }
 
-    public static QName parseQName(String lexicalXSDQName, NamespaceContext nsc) {
+    public static QName parseQName(final String lexicalXSDQName, final NamespaceContext nsc) {
         return converter.parseQName(lexicalXSDQName, nsc);
     }
 
-    public static Calendar parseDateTime(String lexicalXSDDateTime) {
+    public static Calendar parseDateTime(final String lexicalXSDDateTime) {
         return converter.parseDateTime(lexicalXSDDateTime);
     }
 
-    public static byte[] parseBase64Binary(String lexicalXSDBase64Binary) {
+    public static byte[] parseBase64Binary(final String lexicalXSDBase64Binary) {
         return converter.parseBase64Binary(lexicalXSDBase64Binary);
     }
 
-    public static byte[] parseHexBinary(String lexicalXSDHexBinary) {
+    public static byte[] parseHexBinary(final String lexicalXSDHexBinary) {
         return converter.parseHexBinary(lexicalXSDHexBinary);
     }
 
-    public static long parseUnsignedInt(String lexicalXSDUnsignedInt) {
+    public static long parseUnsignedInt(final String lexicalXSDUnsignedInt) {
         return converter.parseUnsignedInt(lexicalXSDUnsignedInt);
     }
 
-    public static int parseUnsignedShort(String lexicalXSDUnsignedShort) {
+    public static int parseUnsignedShort(final String lexicalXSDUnsignedShort) {
         return converter.parseUnsignedShort(lexicalXSDUnsignedShort);
     }
 
-    public static Calendar parseTime(String lexicalXSDTime) {
+    public static Calendar parseTime(final String lexicalXSDTime) {
         return converter.parseTime(lexicalXSDTime);
     }
 
-    public static Calendar parseDate(String lexicalXSDDate) {
+    public static Calendar parseDate(final String lexicalXSDDate) {
         return converter.parseDate(lexicalXSDDate);
     }
 
-    public static String parseAnySimpleType(String lexicalXSDAnySimpleType) {
+    public static String parseAnySimpleType(final String lexicalXSDAnySimpleType) {
         return converter.parseAnySimpleType(lexicalXSDAnySimpleType);
     }
 
-    public static String printString(String val) {
+    public static String printString(final String val) {
         return converter.printString(val);
     }
 
-    public static String printInteger(BigInteger val) {
+    public static String printInteger(final BigInteger val) {
         return converter.printInteger(val);
     }
 
-    public static String printInt(int val) {
+    public static String printInt(final int val) {
         return converter.printInt(val);
     }
 
-    public static String printLong(long val) {
+    public static String printLong(final long val) {
         return converter.printLong(val);
     }
 
-    public static String printShort(short val) {
+    public static String printShort(final short val) {
         return converter.printShort(val);
     }
 
-    public static String printDecimal(BigDecimal val) {
+    public static String printDecimal(final BigDecimal val) {
         return converter.printDecimal(val);
     }
 
-    public static String printFloat(float val) {
+    public static String printFloat(final float val) {
         return converter.printFloat(val);
     }
 
-    public static String printDouble(double val) {
+    public static String printDouble(final double val) {
         return converter.printDouble(val);
     }
 
-    public static String printBoolean(boolean val) {
+    public static String printBoolean(final boolean val) {
         return converter.printBoolean(val);
     }
 
-    public static String printByte(byte val) {
+    public static String printByte(final byte val) {
         return converter.printByte(val);
     }
 
-    public static String printQName(QName val, NamespaceContext nsc) {
+    public static String printQName(final QName val, final NamespaceContext nsc) {
         return converter.printQName(val, nsc);
     }
 
-    public static String printDateTime(Calendar val) {
+    public static String printDateTime(final Calendar val) {
         return converter.printDateTime(val);
     }
 
-    public static String printBase64Binary(byte val[]) {
+    public static String printBase64Binary(final byte[] val) {
         return converter.printBase64Binary(val);
     }
 
-    public static String printHexBinary(byte val[]) {
+    public static String printHexBinary(final byte[] val) {
         return converter.printHexBinary(val);
     }
 
-    public static String printUnsignedInt(long val) {
+    public static String printUnsignedInt(final long val) {
         return converter.printUnsignedInt(val);
     }
 
-    public static String printUnsignedShort(int val) {
+    public static String printUnsignedShort(final int val) {
         return converter.printUnsignedShort(val);
     }
 
-    public static String printTime(Calendar val) {
+    public static String printTime(final Calendar val) {
         return converter.printTime(val);
     }
 
-    public static String printDate(Calendar val) {
+    public static String printDate(final Calendar val) {
         return converter.printDate(val);
     }
 
-    public static String printAnySimpleType(String val) {
+    public static String printAnySimpleType(final String val) {
         return converter.printAnySimpleType(val);
     }
 

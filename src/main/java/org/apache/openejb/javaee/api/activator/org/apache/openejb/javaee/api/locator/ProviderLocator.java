@@ -33,6 +33,7 @@ import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 
+@SuppressWarnings("UnusedDeclaration")
 public class ProviderLocator {
     // our bundle context
     static private Object context;
@@ -49,7 +50,7 @@ public class ProviderLocator {
         try {
             bundleContextClazz = cl.loadClass("org.osgi.framework.BundleContext");
             serviceTrackerClazz = cl.loadClass("org.osgi.util.tracker.ServiceTracker");
-        } catch (ClassNotFoundException e) {
+        } catch (final ClassNotFoundException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
@@ -69,7 +70,7 @@ public class ProviderLocator {
      * @exception ClassNotFoundException
      *                   Thrown if the class cannot be located.
      */
-    static public Class<?> loadClass(String className) throws ClassNotFoundException {
+    static public Class<?> loadClass(final String className) throws ClassNotFoundException {
         return loadClass(className, null, Thread.currentThread().getContextClassLoader());
     }
 
@@ -84,7 +85,7 @@ public class ProviderLocator {
      * @exception ClassNotFoundException
      *                   Thrown if the class cannot be located.
      */
-    static public Class<?> loadClass(String className, Class<?> contextClass) throws ClassNotFoundException {
+    static public Class<?> loadClass(final String className, final Class<?> contextClass) throws ClassNotFoundException {
         return loadClass(className, contextClass, Thread.currentThread().getContextClassLoader());
     }
 
@@ -99,11 +100,12 @@ public class ProviderLocator {
      * @exception ClassNotFoundException
      *                   Thrown if the class cannot be loaded.
      */
-    static public Class<?> loadClass(String className, Class<?>contextClass, ClassLoader loader) throws ClassNotFoundException {
+    static public Class<?> loadClass(final String className, final Class<?>contextClass, ClassLoader loader) throws ClassNotFoundException {
         if (loader != null) {
             try {
                 return loader.loadClass(className);
-            } catch (ClassNotFoundException x) {
+            } catch (final ClassNotFoundException x) {
+                //ignore
             }
         }
         if (contextClass != null) {
@@ -129,10 +131,10 @@ public class ProviderLocator {
      * @exception Exception Thrown for any classloading or exceptions thrown
      *                      trying to instantiate a service instance.
      */
-    static public Object getService(String iface, Class<?> contextClass, ClassLoader loader) throws Exception {
+    static public Object getService(final String iface, final Class<?> contextClass, final ClassLoader loader) throws Exception {
         // try for a classpath locatable instance next.  If we find an appropriate class mapping,
         // create an instance and return it.
-        Class<?> cls = locateServiceClass(iface, contextClass, loader);
+        final Class<?> cls = locateServiceClass(iface, contextClass, loader);
         if (cls != null) {
             return cls.newInstance();
         }
@@ -156,7 +158,7 @@ public class ProviderLocator {
      * @exception Exception Thrown for any classloading exceptions thrown
      *                      trying to load the class.
      */
-    static public Class<?> getServiceClass(String iface, Class<?> contextClass, ClassLoader loader) throws ClassNotFoundException {
+    static public Class<?> getServiceClass(final String iface, final Class<?> contextClass, final ClassLoader loader) throws ClassNotFoundException {
         return locateServiceClass(iface, contextClass, loader);
     }
 
@@ -177,15 +179,15 @@ public class ProviderLocator {
      * @exception Exception Thrown for any classloading or exceptions thrown
      *                      trying to instantiate a service instance.
      */
-    static public List<Object> getServices(String iface, Class<?> contextClass, ClassLoader loader) throws Exception {
-        List<Object> services = new ArrayList<Object>();
+    static public List<Object> getServices(final String iface, final Class<?> contextClass, final ClassLoader loader) throws Exception {
+        final List<Object> services = new ArrayList<Object>();
 
         // try for a classpath locatable instance second.  If we find an appropriate class mapping,
         // create an instance and return it.
-        Collection<Class<?>> classes = locateServiceClasses(iface, contextClass, loader);
+        final Collection<Class<?>> classes = locateServiceClasses(iface, contextClass, loader);
         if (classes != null) {
             // create an instance of each of these classes
-            for (Class<?> cls : classes) {
+            for (final Class<?> cls : classes) {
                 services.add(cls.newInstance());
             }
         }
@@ -211,12 +213,12 @@ public class ProviderLocator {
      * @exception Exception Thrown for any classloading exceptions thrown
      *                      trying to load a provider class.
      */
-    static public List<Class<?>> getServiceClasses(String iface, Class<?> contextClass, ClassLoader loader) throws Exception {
-        Set<Class<?>> serviceClasses = new LinkedHashSet<Class<?>>();
+    static public List<Class<?>> getServiceClasses(final String iface, final Class<?> contextClass, final ClassLoader loader) throws Exception {
+        final Set<Class<?>> serviceClasses = new LinkedHashSet<Class<?>>();
 
         // try for a classpath locatable classes second.  If we find an appropriate class mapping,
         // add this to our return collection.
-        Collection<Class<?>> classes = locateServiceClasses(iface, contextClass, loader);
+        final Collection<Class<?>> classes = locateServiceClasses(iface, contextClass, loader);
         if (classes != null) {
             serviceClasses.addAll(classes);
         }
@@ -236,7 +238,7 @@ public class ProviderLocator {
      * @return The mapped provider name, if found.  Returns null if
      *         no mapping is located.
      */
-    static private String locateServiceClassName(String iface, Class<?> contextClass, ClassLoader loader) {
+    static private String locateServiceClassName(final String iface, final Class<?> contextClass, final ClassLoader loader) {
         // search first with the loader class path
         String name = locateServiceClassName(iface, loader);
         if (name != null) {
@@ -263,21 +265,22 @@ public class ProviderLocator {
      * @return The mapped class name, if one is found.  Returns null if the
      *         mapping is not located.
      */
-    static private String locateServiceClassName(String iface, ClassLoader loader) {
+    static private String locateServiceClassName(final String iface, final ClassLoader loader) {
         if (loader != null) {
             try {
                 // we only look at resources that match the file name, using the specified loader
-                String service = "META-INF/services/" + iface;
-                Enumeration<URL> providers = loader.getResources(service);
+                final String service = "META-INF/services/" + iface;
+                final Enumeration<URL> providers = loader.getResources(service);
 
                 while (providers.hasMoreElements()) {
-                    List<String>providerNames = parseServiceDefinition(providers.nextElement());
+                    final List<String>providerNames = parseServiceDefinition(providers.nextElement());
                     // if there is something defined here, return the first entry
                     if (!providerNames.isEmpty()) {
                         return providerNames.get(0);
                     }
                 }
-            } catch (IOException e) {
+            } catch (final IOException e) {
+                //ignore
             }
         }
         // not found
@@ -296,8 +299,8 @@ public class ProviderLocator {
      * @return The mapped provider class, if found.  Returns null if
      *         no mapping is located.
      */
-    static private Class<?> locateServiceClass(String iface, Class<?> contextClass, ClassLoader loader) throws ClassNotFoundException {
-        String className = locateServiceClassName(iface, contextClass, loader);
+    static private Class<?> locateServiceClass(final String iface, final Class<?> contextClass, final ClassLoader loader) throws ClassNotFoundException {
+        final String className = locateServiceClassName(iface, contextClass, loader);
         if (className == null) {
             return null;
         }
@@ -317,8 +320,8 @@ public class ProviderLocator {
      * @return The mapped provider name, if found.  Returns null if
      *         no mapping is located.
      */
-    static private Collection<String> locateServiceClassNames(String iface, Class<?> contextClass, ClassLoader loader) {
-        Set<String> names = new LinkedHashSet<String>();
+    static private Collection<String> locateServiceClassNames(final String iface, final Class<?> contextClass, final ClassLoader loader) {
+        final Set<String> names = new LinkedHashSet<String>();
 
         locateServiceClassNames(iface, loader, names);
         if (contextClass != null) {
@@ -339,20 +342,20 @@ public class ProviderLocator {
      * @return The mapped provider name, if found.  Returns null if
      *         no mapping is located.
      */
-    static void locateServiceClassNames(String iface, ClassLoader loader, Set names) {
+    static void locateServiceClassNames(final String iface, final ClassLoader loader, final Set names) {
         if (loader != null) {
 
             try {
                 // we only look at resources that match the file name, using the specified loader
-                String service = "META-INF/services/" + iface;
-                Enumeration<URL> providers = loader.getResources(service);
+                final String service = "META-INF/services/" + iface;
+                final Enumeration<URL> providers = loader.getResources(service);
 
                 while (providers.hasMoreElements()) {
-                    List<String>providerNames = parseServiceDefinition(providers.nextElement());
+                    final List<String>providerNames = parseServiceDefinition(providers.nextElement());
                     // just add all of these to the list
                     names.addAll(providerNames);
                 }
-            } catch (IOException e) {
+            } catch (final IOException e) {
             }
         }
     }
@@ -369,13 +372,13 @@ public class ProviderLocator {
      * @return A list of all mapped classes, if found.  Returns an empty list if
      *         no mappings are found.
      */
-    static private Collection<Class<?>> locateServiceClasses(String iface, Class<?> contextClass, ClassLoader loader) throws ClassNotFoundException {
+    static private Collection<Class<?>> locateServiceClasses(final String iface, final Class<?> contextClass, final ClassLoader loader) throws ClassNotFoundException {
         // get the set of names from services definitions on the classpath
-        Collection<String> classNames = locateServiceClassNames(iface, contextClass, loader);
-        Set<Class<?>> classes = new LinkedHashSet<Class<?>>();
+        final Collection<String> classNames = locateServiceClassNames(iface, contextClass, loader);
+        final Set<Class<?>> classes = new LinkedHashSet<Class<?>>();
 
         // load each class and add to our return set
-        for (String name : classNames) {
+        for (final String name : classNames) {
             classes.add(loadClass(name, contextClass, loader));
         }
         return classes;
@@ -391,9 +394,9 @@ public class ProviderLocator {
      * @return A list of all matching classes.  Returns an empty list
      *         if no matches are found.
      */
-    static private List<String> parseServiceDefinition(URL u) {
+    static private List<String> parseServiceDefinition(final URL u) {
         final String url = u.toString();
-        List<String> classes = new ArrayList<String>();
+        final List<String> classes = new ArrayList<String>();
         // ignore directories
         if (url.endsWith("/")) {
             return classes;
@@ -401,14 +404,14 @@ public class ProviderLocator {
         // the identifier used for the provider is the last item in the URL.
         final String providerId = url.substring(url.lastIndexOf("/") + 1);
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(u.openStream(), "UTF-8"));
+            final BufferedReader br = new BufferedReader(new InputStreamReader(u.openStream(), "UTF-8"));
             // the file can be multiple lines long, with comments.  A single file can define multiple providers
             // for a single key, so we might need to create multiple entries.  If the file does not contain any
             // definition lines, then as a default, we use the providerId as an implementation class also.
             String line = br.readLine();
             while (line != null) {
                 // we allow comments on these lines, and a line can be all comment
-                int comment = line.indexOf('#');
+                final int comment = line.indexOf('#');
                 if (comment != -1) {
                     line = line.substring(0, comment);
                 }
@@ -422,7 +425,7 @@ public class ProviderLocator {
                 line = br.readLine();
             }
             br.close();
-        } catch (IOException e) {
+        } catch (final IOException e) {
             // ignore errors and handle as default
         }
         return classes;
@@ -439,11 +442,11 @@ public class ProviderLocator {
      * @return The value of the named property within the properties file.  Returns
      *         null if the property doesn't exist or the properties file doesn't exist.
      */
-    public static String lookupByJREPropertyFile(String path, String property) throws IOException {
-        String jreDirectory = System.getProperty("java.home");
-        File configurationFile = new File(jreDirectory + File.separator + path);
+    public static String lookupByJREPropertyFile(final String path, final String property) throws IOException {
+        final String jreDirectory = System.getProperty("java.home");
+        final File configurationFile = new File(jreDirectory + File.separator + path);
         if (configurationFile.exists() && configurationFile.canRead()) {
-            Properties properties = new Properties();
+            final Properties properties = new Properties();
             InputStream in = null;
             try {
                 in = new FileInputStream(configurationFile);
@@ -453,7 +456,8 @@ public class ProviderLocator {
                 if (in != null) {
                     try {
                         in.close();
-                    } catch (Exception e) {
+                    } catch (final Exception e) {
+                        //ignore
                     }
                 }
             }

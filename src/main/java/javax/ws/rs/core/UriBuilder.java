@@ -19,37 +19,37 @@
 
 package javax.ws.rs.core;
 
+import javax.ws.rs.ext.RuntimeDelegate;
 import java.lang.reflect.Method;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Map;
 
-import javax.ws.rs.ext.RuntimeDelegate;
-
+@SuppressWarnings("UnusedDeclaration")
 public abstract class UriBuilder {
     protected UriBuilder() {
         super();
     }
 
-    public static UriBuilder fromPath(String value) { // here geronimo was buggy
+    public static UriBuilder fromPath(final String value) { // here geronimo was buggy
         return newInstance().path(value);
     }
 
-    public static UriBuilder fromResource(Class<?> resourceClass) {
+    public static UriBuilder fromResource(final Class<?> resourceClass) {
         return newInstance().path(resourceClass);
     }
 
-    public static UriBuilder fromUri(String value) {
+    public static UriBuilder fromUri(final String value) {
         try {
             return fromUri(new URI(value));
-        } catch (NullPointerException e) {
+        } catch (final NullPointerException e) {
             throw new IllegalArgumentException(e);
-        } catch (URISyntaxException e) {
+        } catch (final URISyntaxException e) {
             throw new IllegalArgumentException(e);
         }
     }
 
-    public static UriBuilder fromUri(URI uri) {
+    public static UriBuilder fromUri(final URI uri) {
         return newInstance().uri(uri);
     }
 
@@ -68,7 +68,7 @@ public abstract class UriBuilder {
     public abstract URI buildFromMap(Map<String, ? extends Object> values);
 
     @Override
-    public abstract UriBuilder clone();
+    public abstract UriBuilder clone() throws CloneNotSupportedException;
 
     public abstract UriBuilder fragment(String value);
 

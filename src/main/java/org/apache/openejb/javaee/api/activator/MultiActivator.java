@@ -34,13 +34,13 @@ public class MultiActivator implements BundleActivator {
     private final org.apache.geronimo.specs.activation.Activator activation = new org.apache.geronimo.specs.activation.Activator();
     private final PersistenceActivator persistence = new PersistenceActivator();
 
-    public void start(BundleContext bundleContext) throws Exception {
+    public void start(final BundleContext bundleContext) throws Exception {
         locator.start(bundleContext);
         activation.start(bundleContext);
         persistence.start(bundleContext);
     }
 
-    public void stop(BundleContext bundleContext) throws Exception {
+    public void stop(final BundleContext bundleContext) throws Exception {
         persistence.stop(bundleContext);
         activation.stop(bundleContext);
         locator.stop(bundleContext);
