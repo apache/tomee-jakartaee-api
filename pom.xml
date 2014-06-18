@@ -16,7 +16,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <parent>
     <groupId>org.apache</groupId>
@@ -57,6 +58,34 @@
           <target>1.6</target>
         </configuration>
       </plugin>
+
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>2.5</version>
+        <executions>
+          <execution>
+            <id>clean-shade</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>clean</goal>
+            </goals>
+            <configuration>
+              <excludeDefaultDirectories>true</excludeDefaultDirectories>
+              <verbose>true</verbose>
+              <filesets>
+                <fileset>
+                  <directory>${project.build.directory}/</directory>
+                  <includes>
+                    <include>**/*.jar</include>
+                    <include>**/*.zip</include>
+                  </includes>
+                </fileset>
+              </filesets>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -76,7 +105,6 @@
           </execution>
         </executions>
       </plugin>
-
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -103,6 +131,27 @@
                   <exclude>*:geronimo-el_2.2_spec*</exclude>
                 </excludes>
               </artifactSet>
+              <filters>
+                <filter>
+                  <artifact>org.apache.geronimo.specs:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/*.txt</exclude>
+                    <exclude>META-INF/LICENSE</exclude>
+                    <exclude>javax/xml/bind/**/*.class</exclude>
+                    <exclude>javax/ws/rs/core/UriBuilder.class</exclude>
+                    <exclude>org/apache/geronimo/osgi/locator/ProviderLocator.class</exclude>
+                    <exclude>org/apache/geronimo/osgi/locator/Activator.class</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/LICENSE</exclude>
+                    <exclude>META-INF/NOTICE</exclude>
+                    <exclude>META-INF/README.txt</exclude>
+                  </excludes>
+                </filter>
+              </filters>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <manifestEntries>
@@ -127,25 +176,6 @@
                   <file>${project.basedir}/src/main/legal/META-INF/tomcat/NOTICE</file>
                 </transformer>
               </transformers>
-              <filters>
-                <filter>
-                  <artifact>org.apache.geronimo.specs:*</artifact>
-                  <excludes>
-                    <exclude>META-INF/*.txt</exclude>
-                    <exclude>META-INF/LICENSE</exclude>
-                    <exclude>javax/xml/bind/**/*.class</exclude>
-                    <exclude>javax/ws/rs/core/UriBuilder.class</exclude>
-                  </excludes>
-                </filter>
-                <filter>
-                  <artifact>*:*</artifact>
-                  <excludes>
-                    <exclude>META-INF/LICENSE</exclude>
-                    <exclude>META-INF/NOTICE</exclude>
-                    <exclude>META-INF/README.txt</exclude>
-                  </excludes>
-                </filter>
-              </filters>
             </configuration>
           </execution>
           <execution>
@@ -163,6 +193,29 @@
                   <exclude>*:*:sources</exclude>
                 </excludes>
               </artifactSet>
+              <filters>
+                <filter>
+                  <artifact>org.apache.geronimo.specs:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/*.txt</exclude>
+                    <exclude>META-INF/LICENSE</exclude>
+                    <exclude>META-INF/NOTICE</exclude>
+                    <exclude>javax/ws/rs/core/UriBuilder.class</exclude>
+                    <exclude>javax/xml/bind/ContextFinder.class</exclude>
+                    <exclude>javax/xml/bind/DatatypeConverter.class</exclude>
+                    <exclude>org/apache/geronimo/osgi/locator/ProviderLocator.class</exclude>
+                    <exclude>org/apache/geronimo/osgi/locator/Activator.class</exclude>
+                  </excludes>
+                </filter>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>META-INF/LICENSE</exclude>
+                    <exclude>META-INF/NOTICE</exclude>
+                    <exclude>META-INF/README.txt</exclude>
+                  </excludes>
+                </filter>
+              </filters>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <manifestEntries>
@@ -190,27 +243,6 @@
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer">
                 </transformer>
               </transformers>
-              <filters>
-                <filter>
-                  <artifact>org.apache.geronimo.specs:*</artifact>
-                  <excludes>
-                    <exclude>META-INF/*.txt</exclude>
-                    <exclude>META-INF/LICENSE</exclude>
-                    <exclude>META-INF/NOTICE</exclude>
-                    <exclude>javax/ws/rs/core/UriBuilder.class</exclude>
-                    <exclude>javax/xml/bind/ContextFinder.class</exclude>
-                    <exclude>javax/xml/bind/DatatypeConverter.class</exclude>
-                  </excludes>
-                </filter>
-                <filter>
-                  <artifact>*:*</artifact>
-                  <excludes>
-                    <exclude>META-INF/LICENSE</exclude>
-                    <exclude>META-INF/NOTICE</exclude>
-                    <exclude>META-INF/README.txt</exclude>
-                  </excludes>
-                </filter>
-              </filters>
             </configuration>
           </execution>
         </executions>
