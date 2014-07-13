@@ -123,7 +123,7 @@
               <shadedArtifactAttached>true</shadedArtifactAttached>
               <shadedClassifierName>tomcat</shadedClassifierName>
               <artifactSet>
-                <excludes>
+                <excludes> <!-- when upgrading to API 7 remove javax.annotation from tomcat jar -->
                   <exclude>*:*:sources</exclude>
                   <exclude>*:geronimo-jsp*</exclude>
                   <exclude>*:geronimo-servlet*</exclude>
