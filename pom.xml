@@ -633,6 +633,33 @@
       <optional>true</optional>
     </dependency>
 
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-json_1.0_spec</artifactId>
+      <version>${geronimo-json_1.0_spec.version}</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-json_1.0_spec</artifactId>
+      <version>${geronimo-json_1.0_spec.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-concurrent_1.0_spec</artifactId>
+      <version>${geronimo-concurrent_1.0_spec.version}</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-concurrent_1.0_spec</artifactId>
+      <version>${geronimo-concurrent_1.0_spec.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
   </dependencies>
 
   <properties>
@@ -663,5 +690,7 @@
     <geronimo-jaxws_2.2_spec.version>1.1</geronimo-jaxws_2.2_spec.version>
     <geronimo-osgi.version>1.0</geronimo-osgi.version>
     <geronimo-jaxb_2.2_spec.version>1.0.1</geronimo-jaxb_2.2_spec.version>
+    <geronimo-json_1.0_spec.version>1.0-SNAPSHOT</geronimo-json_1.0_spec.version>
+    <geronimo-concurrent_1.0_spec.version>1.0-SNAPSHOT</geronimo-concurrent_1.0_spec.version>
   </properties>
 </project>
