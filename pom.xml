@@ -136,7 +136,6 @@
                   <excludes>
                     <exclude>META-INF/*.txt</exclude>
                     <exclude>META-INF/LICENSE</exclude>
-                    <exclude>javax/xml/bind/**/*.class</exclude>
                     <exclude>org/apache/geronimo/osgi/locator/ProviderLocator.class</exclude>
                     <exclude>org/apache/geronimo/osgi/locator/Activator.class</exclude>
                   </excludes>
@@ -198,8 +197,6 @@
                     <exclude>META-INF/*.txt</exclude>
                     <exclude>META-INF/LICENSE</exclude>
                     <exclude>META-INF/NOTICE</exclude>
-                    <exclude>javax/xml/bind/ContextFinder.class</exclude>
-                    <exclude>javax/xml/bind/DatatypeConverter.class</exclude>
                     <exclude>org/apache/geronimo/osgi/locator/ProviderLocator.class</exclude>
                     <exclude>org/apache/geronimo/osgi/locator/Activator.class</exclude>
                   </excludes>
@@ -421,19 +418,6 @@
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jaspic_1.0_spec</artifactId>
       <version>${geronimo-jaspic_1.0_spec.version}</version>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-jaxb_2.2_spec</artifactId>
-      <version>${geronimo-jaxb_2.2_spec.version}</version>
-      <classifier>sources</classifier>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-jaxb_2.2_spec</artifactId>
-      <version>${geronimo-jaxb_2.2_spec.version}</version>
       <optional>true</optional>
     </dependency>
     <dependency>
@@ -689,7 +673,6 @@
     <geronimo-jcdi_1.0_spec.version>1.0</geronimo-jcdi_1.0_spec.version>
     <geronimo-jaxws_2.2_spec.version>1.1</geronimo-jaxws_2.2_spec.version>
     <geronimo-osgi.version>1.0</geronimo-osgi.version>
-    <geronimo-jaxb_2.2_spec.version>1.0.1</geronimo-jaxb_2.2_spec.version>
     <geronimo-json_1.0_spec.version>1.0-SNAPSHOT</geronimo-json_1.0_spec.version>
     <geronimo-concurrent_1.0_spec.version>1.0-SNAPSHOT</geronimo-concurrent_1.0_spec.version>
   </properties>
