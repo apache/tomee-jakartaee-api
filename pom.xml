@@ -446,13 +446,13 @@
       <version>${geronimo-jaxrpc_1.1_spec.version}</version>
       <optional>true</optional>
     </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-jaxrs_2.0_spec</artifactId>
-      <version>${geronimo-jaxrs_2.0_spec.version}</version>
-      <classifier>sources</classifier>
-      <optional>true</optional>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.apache.geronimo.specs</groupId>-->
+      <!--<artifactId>geronimo-jaxrs_2.0_spec</artifactId>-->
+      <!--<version>${geronimo-jaxrs_2.0_spec.version}</version>-->
+      <!--<classifier>sources</classifier>-->
+      <!--<optional>true</optional>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jaxrs_2.0_spec</artifactId>
@@ -623,13 +623,13 @@
       <version>${geronimo-json_1.0_spec.version}</version>
       <optional>true</optional>
     </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-json_1.0_spec</artifactId>
-      <version>${geronimo-json_1.0_spec.version}</version>
-      <classifier>sources</classifier>
-      <optional>true</optional>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.apache.geronimo.specs</groupId>-->
+      <!--<artifactId>geronimo-json_1.0_spec</artifactId>-->
+      <!--<version>${geronimo-json_1.0_spec.version}</version>-->
+      <!--<classifier>sources</classifier>-->
+      <!--<optional>true</optional>-->
+    <!--</dependency>-->
 
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
@@ -637,13 +637,13 @@
       <version>${geronimo-concurrent_1.0_spec.version}</version>
       <optional>true</optional>
     </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-concurrent_1.0_spec</artifactId>
-      <version>${geronimo-concurrent_1.0_spec.version}</version>
-      <classifier>sources</classifier>
-      <optional>true</optional>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.apache.geronimo.specs</groupId>-->
+      <!--<artifactId>geronimo-concurrent_1.0_spec</artifactId>-->
+      <!--<version>${geronimo-concurrent_1.0_spec.version}</version>-->
+      <!--<classifier>sources</classifier>-->
+      <!--<optional>true</optional>-->
+    <!--</dependency>-->
   </dependencies>
 
   <properties>
