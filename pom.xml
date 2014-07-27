@@ -318,15 +318,15 @@
     </dependency>
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-ejb_3.1_spec</artifactId>
-      <version>${geronimo-ejb_3.1_spec.version}</version>
+      <artifactId>geronimo-ejb_3.2_spec</artifactId>
+      <version>${geronimo-ejb_3.2_spec.version}</version>
       <classifier>sources</classifier>
       <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-ejb_3.1_spec</artifactId>
-      <version>${geronimo-ejb_3.1_spec.version}</version>
+      <artifactId>geronimo-ejb_3.2_spec</artifactId>
+      <version>${geronimo-ejb_3.2_spec.version}</version>
       <optional>true</optional>
     </dependency>
     <dependency>
@@ -446,13 +446,13 @@
       <version>${geronimo-jaxrpc_1.1_spec.version}</version>
       <optional>true</optional>
     </dependency>
-    <!--<dependency>-->
-      <!--<groupId>org.apache.geronimo.specs</groupId>-->
-      <!--<artifactId>geronimo-jaxrs_2.0_spec</artifactId>-->
-      <!--<version>${geronimo-jaxrs_2.0_spec.version}</version>-->
-      <!--<classifier>sources</classifier>-->
-      <!--<optional>true</optional>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-jaxrs_2.0_spec</artifactId>
+      <version>${geronimo-jaxrs_2.0_spec.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jaxrs_2.0_spec</artifactId>
@@ -637,13 +637,13 @@
       <version>${geronimo-json_1.0_spec.version}</version>
       <optional>true</optional>
     </dependency>
-    <!--<dependency>-->
-      <!--<groupId>org.apache.geronimo.specs</groupId>-->
-      <!--<artifactId>geronimo-json_1.0_spec</artifactId>-->
-      <!--<version>${geronimo-json_1.0_spec.version}</version>-->
-      <!--<classifier>sources</classifier>-->
-      <!--<optional>true</optional>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-json_1.0_spec</artifactId>
+      <version>${geronimo-json_1.0_spec.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
 
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
@@ -651,13 +651,13 @@
       <version>${geronimo-concurrent_1.0_spec.version}</version>
       <optional>true</optional>
     </dependency>
-    <!--<dependency>-->
-      <!--<groupId>org.apache.geronimo.specs</groupId>-->
-      <!--<artifactId>geronimo-concurrent_1.0_spec</artifactId>-->
-      <!--<version>${geronimo-concurrent_1.0_spec.version}</version>-->
-      <!--<classifier>sources</classifier>-->
-      <!--<optional>true</optional>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-concurrent_1.0_spec</artifactId>
+      <version>${geronimo-concurrent_1.0_spec.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
   </dependencies>
 
   <properties>
@@ -672,7 +672,7 @@
     <geronimo-j2ee-deployment_1.1_spec.version>1.1</geronimo-j2ee-deployment_1.1_spec.version>
     <geronimo-j2ee-connector_1.6_spec.version>1.0</geronimo-j2ee-connector_1.6_spec.version>
     <geronimo-j2ee-management_1.1_spec.version>1.0.1</geronimo-j2ee-management_1.1_spec.version>
-    <geronimo-ejb_3.1_spec.version>1.0.2</geronimo-ejb_3.1_spec.version>
+    <geronimo-ejb_3.2_spec.version>1.0-SNAPSHOT</geronimo-ejb_3.2_spec.version>
     <geronimo-el_2.2_spec.version>1.0.2</geronimo-el_2.2_spec.version>
     <geronimo-jsp_2.2_spec.version>1.0</geronimo-jsp_2.2_spec.version>
     <geronimo-ws-metadata_2.0_spec.version>1.1.3</geronimo-ws-metadata_2.0_spec.version>
