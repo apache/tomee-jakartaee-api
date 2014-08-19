@@ -279,6 +279,19 @@
     </dependency>
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-jcache_1.0_spec</artifactId>
+      <version>${geronimo-jcache_1.0_spec.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-jcache_1.0_spec</artifactId>
+      <version>${geronimo-jcache_1.0_spec.version}</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-activation_1.1_spec</artifactId>
       <version>${geronimo-activation_1.1_spec.version}</version>
       <classifier>sources</classifier>
@@ -690,6 +703,7 @@
     <geronimo-json_1.0_spec.version>1.0-SNAPSHOT</geronimo-json_1.0_spec.version>
     <geronimo-concurrent_1.0_spec.version>1.0-SNAPSHOT</geronimo-concurrent_1.0_spec.version>
     <geronimo-jbatch_1.0_spec.version>1.0</geronimo-jbatch_1.0_spec.version>
+    <geronimo-jcache_1.0_spec.version>1.0-SNAPSHOT</geronimo-jcache_1.0_spec.version>
     <tomcat-el-api.version>8.0.9</tomcat-el-api.version>
   </properties>
 </project>
