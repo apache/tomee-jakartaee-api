@@ -703,6 +703,6 @@
     <geronimo-concurrent_1.0_spec.version>1.0-alpha-1</geronimo-concurrent_1.0_spec.version>
     <geronimo-jbatch_1.0_spec.version>1.0</geronimo-jbatch_1.0_spec.version>
     <geronimo-jcache_1.0_spec.version>1.0-alpha-1</geronimo-jcache_1.0_spec.version>
-    <tomcat.version>8.0.12</tomcat.version>
+    <tomcat.version>8.0.18</tomcat.version>
   </properties>
 </project>
