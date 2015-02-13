@@ -676,17 +676,17 @@
 
   <properties>
     <geronimo-interceptor_1.2_spec.version>1.0-alpha-1</geronimo-interceptor_1.2_spec.version>
-    <geronimo-jms_2.0_spec.version>1.0.0-SNAPSHOT</geronimo-jms_2.0_spec.version>
+    <geronimo-jms_2.0_spec.version>1.0-alpha-1</geronimo-jms_2.0_spec.version>
     <geronimo-jpa_2.0_spec.version>1.1</geronimo-jpa_2.0_spec.version>
-    <geronimo-jta_1.2_spec.version>1.0-SNAPSHOT</geronimo-jta_1.2_spec.version>
+    <geronimo-jta_1.2_spec.version>1.0-alpha-1</geronimo-jta_1.2_spec.version>
     <geronimo-jacc_1.4_spec.version>1.0</geronimo-jacc_1.4_spec.version>
     <geronimo-jaxr_1.0_spec.version>2.1</geronimo-jaxr_1.0_spec.version>
-    <geronimo-jaxrs_2.0_spec.version>1.0-SNAPSHOT</geronimo-jaxrs_2.0_spec.version>
+    <geronimo-jaxrs_2.0_spec.version>1.0-alpha-1</geronimo-jaxrs_2.0_spec.version>
     <geronimo-jaxrpc_1.1_spec.version>2.1</geronimo-jaxrpc_1.1_spec.version>
     <geronimo-j2ee-deployment_1.1_spec.version>1.1</geronimo-j2ee-deployment_1.1_spec.version>
     <geronimo-j2ee-connector_1.6_spec.version>1.0</geronimo-j2ee-connector_1.6_spec.version>
     <geronimo-j2ee-management_1.1_spec.version>1.0.1</geronimo-j2ee-management_1.1_spec.version>
-    <geronimo-ejb_3.2_spec.version>1.0-SNAPSHOT</geronimo-ejb_3.2_spec.version>
+    <geronimo-ejb_3.2_spec.version>1.0-alpha-1</geronimo-ejb_3.2_spec.version>
     <geronimo-jsp_2.2_spec.version>1.0</geronimo-jsp_2.2_spec.version>
     <geronimo-ws-metadata_2.0_spec.version>1.1.3</geronimo-ws-metadata_2.0_spec.version>
     <geronimo-annotation_1.2_spec.version>1.0-alpha-1</geronimo-annotation_1.2_spec.version>
