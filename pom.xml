@@ -127,6 +127,7 @@
                   <exclude>*:*:sources</exclude>
                   <exclude>*:geronimo-jsp*</exclude>
                   <exclude>*:tomcat-servlet-api*</exclude>
+                  <exclude>*:tomcat-websocket-api*</exclude>
                   <exclude>*:tomcat-el-api*</exclude>
                 </excludes>
               </artifactSet>
@@ -548,6 +549,19 @@
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-saaj_1.3_spec</artifactId>
       <version>${geronimo-saaj_1.3_spec.version}</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-websocket-api</artifactId>
+      <version>${tomcat.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-websocket-api</artifactId>
+      <version>${tomcat.version}</version>
       <optional>true</optional>
     </dependency>
     <dependency>
