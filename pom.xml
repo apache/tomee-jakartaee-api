@@ -24,7 +24,7 @@
     <version>14</version>
   </parent>
 
-  <groupId>org.apache.openejb</groupId>
+  <groupId>org.apache.tomee</groupId>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>javaee-api</artifactId>
   <packaging>jar</packaging>
