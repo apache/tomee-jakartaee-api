@@ -21,7 +21,8 @@
   <parent>
     <groupId>org.apache</groupId>
     <artifactId>apache</artifactId>
-    <version>16</version>
+    <version>17</version>
+    <relativePath><!--Resolve on repository--></relativePath>
   </parent>
 
   <groupId>org.apache.tomee</groupId>
