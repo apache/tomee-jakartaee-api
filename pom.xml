@@ -160,6 +160,7 @@
                 <excludes>
                   <exclude>*:*:sources</exclude>
                   <exclude>*:geronimo-jsp*</exclude>
+                  <exclude>*:geronimo-jaspic*</exclude>
                   <exclude>*:tomcat-servlet-api*</exclude>
                   <exclude>*:tomcat-websocket-api*</exclude>
                   <exclude>*:tomcat-el-api*</exclude>
