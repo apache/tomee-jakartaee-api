@@ -73,16 +73,6 @@
   </properties>
 
 
-  <repositories>
-    <!-- TODO this MUST be commented out before any release! -->
-    <repository>
-      <id>staging</id>
-      <url>https://repository.apache.org/content/repositories/orgapachegeronimo-1046</url>
-      <releases><enabled>true</enabled></releases>
-      <snapshots><enabled>false</enabled></snapshots>
-    </repository>
-  </repositories>
-
   <build>
     <resources>
       <resource>
