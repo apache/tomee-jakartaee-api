@@ -61,9 +61,9 @@
     <geronimo-saaj_1.3_spec.version>1.1</geronimo-saaj_1.3_spec.version>
     <geronimo-atinject_1.0_spec.version>1.0</geronimo-atinject_1.0_spec.version>
     <geronimo-jaspic_1.0_spec.version>1.1</geronimo-jaspic_1.0_spec.version>
-    <geronimo-jcdi_2.0_spec.version>1.0</geronimo-jcdi_2.0_spec.version>
+    <geronimo-jcdi_2.0_spec.version>1.0.1</geronimo-jcdi_2.0_spec.version>
     <geronimo-jaxws_2.2_spec.version>1.2</geronimo-jaxws_2.2_spec.version>
-    <geronimo-osgi.version>1.0</geronimo-osgi.version>
+    <geronimo-osgi.version>1.1</geronimo-osgi.version>
     <geronimo-json_1.1_spec.version>1.0</geronimo-json_1.1_spec.version>
     <geronimo-jsonb_1.0_spec.version>1.0</geronimo-jsonb_1.0_spec.version>
     <geronimo-concurrent_1.0_spec.version>1.0-alpha-1</geronimo-concurrent_1.0_spec.version>
