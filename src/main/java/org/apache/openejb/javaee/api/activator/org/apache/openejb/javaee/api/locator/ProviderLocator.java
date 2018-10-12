@@ -80,6 +80,7 @@ public class ProviderLocator {
      * the search order.
      *
      * @param className The name of the target class.
+     * @param contextClass The context class to retrive the classloader.
      *
      * @return The loaded class.
      * @exception ClassNotFoundException
@@ -94,6 +95,7 @@ public class ProviderLocator {
      * with support for OSGi registry lookups.
      *
      * @param className The name of the target class.
+     * @param contextClass The context class to retrive the classloader.
      * @param loader    An optional class loader.
      *
      * @return The loaded class
@@ -155,8 +157,8 @@ public class ProviderLocator {
      *
      * @return The located class, or null if no matching services
      *         can be found.
-     * @exception Exception Thrown for any classloading exceptions thrown
-     *                      trying to load the class.
+     * @exception ClassNotFoundException Thrown for any classloading exceptions thrown
+     *                                   trying to load the class.
      */
     static public Class<?> getServiceClass(final String iface, final Class<?> contextClass, final ClassLoader loader) throws ClassNotFoundException {
         return locateServiceClass(iface, contextClass, loader);
