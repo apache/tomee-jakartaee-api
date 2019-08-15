@@ -33,6 +33,11 @@
 
   <name>TomEE :: JavaEE 8 Full API</name>
 
+  <prerequisites>
+    <maven>3.0</maven>
+  </prerequisites>
+
+
   <scm>
     <connection>scm:svn:http://svn.apache.org/repos/asf/tomee/javaee-api/trunk</connection>
     <developerConnection>scm:svn:https://svn.apache.org/repos/asf/tomee/javaee-api/trunk</developerConnection>
@@ -40,36 +45,41 @@
   </scm>
 
   <properties>
-    <geronimo-interceptor_1.2_spec.version>1.1</geronimo-interceptor_1.2_spec.version>
-    <geronimo-jms_2.0_spec.version>1.0-alpha-2</geronimo-jms_2.0_spec.version>
-    <geronimo-jpa_2.2_spec.version>1.0</geronimo-jpa_2.2_spec.version>
-    <geronimo-jta_1.2_spec.version>1.0-alpha-1</geronimo-jta_1.2_spec.version>
-    <geronimo-jacc_1.4_spec.version>1.0</geronimo-jacc_1.4_spec.version>
-    <geronimo-jaxr_1.0_spec.version>2.1</geronimo-jaxr_1.0_spec.version>
-    <geronimo-jaxrs_2.1_spec.version>1.1</geronimo-jaxrs_2.1_spec.version>
-    <geronimo-jaxrpc_1.1_spec.version>2.1</geronimo-jaxrpc_1.1_spec.version>
-    <geronimo-j2ee-deployment_1.1_spec.version>1.1</geronimo-j2ee-deployment_1.1_spec.version>
-    <geronimo-j2ee-connector_1.6_spec.version>1.0</geronimo-j2ee-connector_1.6_spec.version>
-    <geronimo-j2ee-management_1.1_spec.version>1.0.1</geronimo-j2ee-management_1.1_spec.version>
-    <geronimo-ejb_3.2_spec.version>1.0-alpha-1</geronimo-ejb_3.2_spec.version>
-    <geronimo-jsp_2.2_spec.version>1.2</geronimo-jsp_2.2_spec.version>
-    <geronimo-ws-metadata_2.0_spec.version>1.1.3</geronimo-ws-metadata_2.0_spec.version>
-    <geronimo-annotation_1.3_spec.version>1.1</geronimo-annotation_1.3_spec.version>
-    <geronimo-validation_2.0_spec.version>1.0</geronimo-validation_2.0_spec.version>
     <geronimo-activation_1.1_spec.version>1.1</geronimo-activation_1.1_spec.version>
-    <geronimo-stax-api_1.2_spec.version>1.2</geronimo-stax-api_1.2_spec.version>
-    <geronimo-saaj_1.3_spec.version>1.1</geronimo-saaj_1.3_spec.version>
+    <geronimo-annotation_1.3_spec.version>1.1</geronimo-annotation_1.3_spec.version>
     <geronimo-atinject_1.0_spec.version>1.1</geronimo-atinject_1.0_spec.version>
-    <geronimo-jaspic_1.0_spec.version>1.1</geronimo-jaspic_1.0_spec.version>
-    <geronimo-jcdi_2.0_spec.version>1.1</geronimo-jcdi_2.0_spec.version>
-    <geronimo-jaxws_2.2_spec.version>1.2</geronimo-jaxws_2.2_spec.version>
-    <geronimo-osgi.version>1.1</geronimo-osgi.version>
-    <geronimo-json_1.1_spec.version>1.2</geronimo-json_1.1_spec.version>
-    <geronimo-jsonb_1.0_spec.version>1.1</geronimo-jsonb_1.0_spec.version>
     <geronimo-concurrent_1.0_spec.version>1.0-alpha-1</geronimo-concurrent_1.0_spec.version>
+    <geronimo-ejb_3.2_spec.version>1.0-alpha-1</geronimo-ejb_3.2_spec.version>
+    <geronimo-j2ee-connector_1.6_spec.version>1.0</geronimo-j2ee-connector_1.6_spec.version>
+    <geronimo-j2ee-deployment_1.1_spec.version>1.1</geronimo-j2ee-deployment_1.1_spec.version>
+    <geronimo-j2ee-management_1.1_spec.version>1.0.1</geronimo-j2ee-management_1.1_spec.version>
+    <geronimo-jacc_1.4_spec.version>1.0</geronimo-jacc_1.4_spec.version>
+    <geronimo-javamail_1.5_spec.version>1.0.0-SNAPSHOT</geronimo-javamail_1.5_spec.version>
+    <geronimo-jaxb_2.2_spec.version>1.0.1</geronimo-jaxb_2.2_spec.version>
+    <geronimo-jaxr_1.0_spec.version>2.1</geronimo-jaxr_1.0_spec.version>
+    <geronimo-jaxrpc_1.1_spec.version>2.1</geronimo-jaxrpc_1.1_spec.version>
+    <geronimo-jaxrs_2.1_spec.version>1.1</geronimo-jaxrs_2.1_spec.version>
+    <geronimo-jaxws_2.2_spec.version>1.2</geronimo-jaxws_2.2_spec.version>
     <geronimo-jbatch_1.0_spec.version>1.1</geronimo-jbatch_1.0_spec.version>
     <geronimo-jcache_1.0_spec.version>1.0-alpha-1</geronimo-jcache_1.0_spec.version>
-    <tomcat.version>9.0.16</tomcat.version>
+    <geronimo-jcdi_2.0_spec.version>1.1</geronimo-jcdi_2.0_spec.version>
+    <geronimo-jms_2.0_spec.version>1.0-alpha-2</geronimo-jms_2.0_spec.version>
+    <geronimo-jpa_2.2_spec.version>1.0</geronimo-jpa_2.2_spec.version>
+    <geronimo-json_1.1_spec.version>1.2</geronimo-json_1.1_spec.version>
+    <geronimo-jsonb_1.0_spec.version>1.1</geronimo-jsonb_1.0_spec.version>
+    <geronimo-jta_1.2_spec.version>1.0-alpha-1</geronimo-jta_1.2_spec.version>
+    <geronimo-osgi.version>1.1</geronimo-osgi.version>
+    <geronimo-saaj_1.3_spec.version>1.1</geronimo-saaj_1.3_spec.version>
+    <geronimo-security_1.0_spec.version>1.0-SNAPSHOT</geronimo-security_1.0_spec.version>
+    <geronimo-stax-api_1.2_spec.version>1.2</geronimo-stax-api_1.2_spec.version>
+    <geronimo-validation_2.0_spec.version>1.0</geronimo-validation_2.0_spec.version>
+    <geronimo-ws-metadata_2.0_spec.version>1.1.3</geronimo-ws-metadata_2.0_spec.version>
+    <geronimo-interceptor_1.2_spec.version>1.1</geronimo-interceptor_1.2_spec.version>
+
+    <!-- Jakarta APIs -->
+
+    <!-- We use servlet, jsp, jaspic, websocket, el straight from Tomcat APIs -->
+    <tomcat.version>9.0.22</tomcat.version>
   </properties>
 
 
@@ -87,16 +97,16 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5</version>
+        <version>3.8.1</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
 
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
-        <version>2.6.1</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>clean-shade</id>
@@ -144,7 +154,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>2.3</version>
+        <version>3.2.1</version>
         <executions>
           <execution>
             <id>javaee-api-tomcat</id>
@@ -161,11 +171,7 @@
               <artifactSet>
                 <excludes>
                   <exclude>*:*:sources</exclude>
-                  <exclude>*:geronimo-jsp*</exclude>
-                  <exclude>*:geronimo-jaspic*</exclude>
-                  <exclude>*:tomcat-servlet-api*</exclude>
-                  <exclude>*:tomcat-websocket-api*</exclude>
-                  <exclude>*:tomcat-el-api*</exclude>
+                  <exclude>*:tomcat-*</exclude>
                 </excludes>
               </artifactSet>
               <filters>
@@ -283,7 +289,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <version>1.10</version>
+        <version>3.0.0</version>
         <executions>
           <execution>
             <id>attach-artifacts</id>
@@ -315,6 +321,7 @@
       <version>4.2.0</version>
       <scope>provided</scope>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jcache_1.0_spec</artifactId>
@@ -328,6 +335,7 @@
       <version>${geronimo-jcache_1.0_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-activation_1.1_spec</artifactId>
@@ -341,6 +349,39 @@
       <version>${geronimo-activation_1.1_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
+    <!-- does not exist until we have an actual release
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-javamail_1.5_spec</artifactId>
+      <version>${geronimo-javamail_1.5_spec.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
+    -->
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-javamail_1.5_spec</artifactId>
+      <version>${geronimo-javamail_1.5_spec.version}</version>
+      <optional>true</optional>
+    </dependency>
+
+    <!-- does not exist until we have an actual release
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-security_1.0_spec</artifactId>
+      <version>${geronimo-security_1.0_spec.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
+    -->
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-security_1.0_spec</artifactId>
+      <version>${geronimo-security_1.0_spec.version}</version>
+      <optional>true</optional>
+    </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-annotation_1.3_spec</artifactId>
@@ -354,6 +395,7 @@
       <version>${geronimo-annotation_1.3_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-atinject_1.0_spec</artifactId>
@@ -367,6 +409,7 @@
       <version>${geronimo-atinject_1.0_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-ejb_3.2_spec</artifactId>
@@ -380,6 +423,7 @@
       <version>${geronimo-ejb_3.2_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-interceptor_1.2_spec</artifactId>
@@ -393,6 +437,7 @@
       <version>${geronimo-interceptor_1.2_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-j2ee-connector_1.6_spec</artifactId>
@@ -406,6 +451,7 @@
       <version>${geronimo-j2ee-connector_1.6_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-j2ee-deployment_1.1_spec</artifactId>
@@ -419,6 +465,7 @@
       <version>${geronimo-j2ee-deployment_1.1_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-j2ee-management_1.1_spec</artifactId>
@@ -432,6 +479,7 @@
       <version>${geronimo-j2ee-management_1.1_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jacc_1.4_spec</artifactId>
@@ -445,19 +493,7 @@
       <version>${geronimo-jacc_1.4_spec.version}</version>
       <optional>true</optional>
     </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-jaspic_1.0_spec</artifactId>
-      <version>${geronimo-jaspic_1.0_spec.version}</version>
-      <classifier>sources</classifier>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-jaspic_1.0_spec</artifactId>
-      <version>${geronimo-jaspic_1.0_spec.version}</version>
-      <optional>true</optional>
-    </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jaxr_1.0_spec</artifactId>
@@ -471,6 +507,7 @@
       <version>${geronimo-jaxr_1.0_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jaxrpc_1.1_spec</artifactId>
@@ -484,6 +521,7 @@
       <version>${geronimo-jaxrpc_1.1_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jaxrs_2.1_spec</artifactId>
@@ -497,6 +535,7 @@
       <version>${geronimo-jaxrs_2.1_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jaxws_2.2_spec</artifactId>
@@ -510,6 +549,7 @@
       <version>${geronimo-jaxws_2.2_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jcdi_2.0_spec</artifactId>
@@ -523,6 +563,7 @@
       <version>${geronimo-jcdi_2.0_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jms_2.0_spec</artifactId>
@@ -536,6 +577,7 @@
       <version>${geronimo-jms_2.0_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jpa_2.2_spec</artifactId>
@@ -547,21 +589,9 @@
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jpa_2.2_spec</artifactId>
       <version>${geronimo-jpa_2.2_spec.version}</version>
-      <optional>true</optional>
+      <optional>false</optional>
     </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-jsp_2.2_spec</artifactId>
-      <version>${geronimo-jsp_2.2_spec.version}</version>
-      <classifier>sources</classifier>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-jsp_2.2_spec</artifactId>
-      <version>${geronimo-jsp_2.2_spec.version}</version>
-      <optional>true</optional>
-    </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-jta_1.2_spec</artifactId>
@@ -575,6 +605,7 @@
       <version>${geronimo-jta_1.2_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-saaj_1.3_spec</artifactId>
@@ -588,32 +619,7 @@
       <version>${geronimo-saaj_1.3_spec.version}</version>
       <optional>true</optional>
     </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-websocket-api</artifactId>
-      <version>${tomcat.version}</version>
-      <classifier>sources</classifier>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-websocket-api</artifactId>
-      <version>${tomcat.version}</version>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-servlet-api</artifactId>
-      <version>${tomcat.version}</version>
-      <classifier>sources</classifier>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-servlet-api</artifactId>
-      <version>${tomcat.version}</version>
-      <optional>true</optional>
-    </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-stax-api_1.2_spec</artifactId>
@@ -627,6 +633,7 @@
       <version>${geronimo-stax-api_1.2_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-validation_2.0_spec</artifactId>
@@ -640,6 +647,7 @@
       <version>${geronimo-validation_2.0_spec.version}</version>
       <optional>true</optional>
     </dependency>
+
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-ws-metadata_2.0_spec</artifactId>
@@ -724,19 +732,77 @@
       <optional>true</optional>
     </dependency>
 
+    <!-- APIs from Tomcat -->
     <dependency>
       <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-el-api</artifactId>
+      <artifactId>tomcat-websocket-api</artifactId>
       <version>${tomcat.version}</version>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>tomcat-el-api</artifactId>
-      <version>${tomcat.version}</version>
-      <optional>true</optional>
       <classifier>sources</classifier>
+      <optional>true</optional>
     </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-websocket-api</artifactId>
+      <version>${tomcat.version}</version>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-servlet-api</artifactId>
+      <version>${tomcat.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-servlet-api</artifactId>
+      <version>${tomcat.version}</version>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jaspic-api</artifactId>
+      <version>${tomcat.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jaspic-api</artifactId>
+      <version>${tomcat.version}</version>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jsp-api</artifactId>
+      <version>${tomcat.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jsp-api</artifactId>
+      <version>${tomcat.version}</version>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-el-api</artifactId>
+      <version>${tomcat.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-el-api</artifactId>
+      <version>${tomcat.version}</version>
+      <optional>true</optional>
+    </dependency>
+
   </dependencies>
 
 </project>

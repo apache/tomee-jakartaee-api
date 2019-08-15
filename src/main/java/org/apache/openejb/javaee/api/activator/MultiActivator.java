@@ -20,7 +20,6 @@
 
 package org.apache.openejb.javaee.api.activator;
 
-import org.apache.geronimo.specs.jpa.PersistenceActivator;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
@@ -32,16 +31,13 @@ public class MultiActivator implements BundleActivator {
 
     private final org.apache.geronimo.osgi.locator.Activator locator = new org.apache.geronimo.osgi.locator.Activator();
     private final org.apache.geronimo.specs.activation.Activator activation = new org.apache.geronimo.specs.activation.Activator();
-    private final PersistenceActivator persistence = new PersistenceActivator();
 
     public void start(final BundleContext bundleContext) throws Exception {
         locator.start(bundleContext);
         activation.start(bundleContext);
-        persistence.start(bundleContext);
     }
 
     public void stop(final BundleContext bundleContext) throws Exception {
-        persistence.stop(bundleContext);
         activation.stop(bundleContext);
         locator.stop(bundleContext);
     }
