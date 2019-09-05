@@ -25,20 +25,18 @@ import org.osgi.framework.BundleContext;
 
 /**
  * This exists only to call the 3 BundleActivators present in the un-amalgamated jars.
+ *
  * @version $Rev$ $Date$
  */
 public class MultiActivator implements BundleActivator {
 
     private final org.apache.geronimo.osgi.locator.Activator locator = new org.apache.geronimo.osgi.locator.Activator();
-    private final org.apache.geronimo.specs.activation.Activator activation = new org.apache.geronimo.specs.activation.Activator();
 
     public void start(final BundleContext bundleContext) throws Exception {
         locator.start(bundleContext);
-        activation.start(bundleContext);
     }
 
     public void stop(final BundleContext bundleContext) throws Exception {
-        activation.stop(bundleContext);
         locator.stop(bundleContext);
     }
 }
