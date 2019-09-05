@@ -28,7 +28,7 @@
 
   <groupId>org.apache.tomee</groupId>
   <artifactId>javaee-api</artifactId>
-  <version>8.0-2</version>
+  <version>8.0-3-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>TomEE :: JavaEE 8 Full API</name>
@@ -39,9 +39,9 @@
 
 
   <scm>
-    <connection>scm:svn:http://svn.apache.org/repos/asf/tomee/javaee-api/tags/javaee-api-8.0-2</connection>
-    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/tomee/javaee-api/tags/javaee-api-8.0-2</developerConnection>
-    <url>http://svn.apache.org/viewvc/tomee/javaee-api/tags/javaee-api-8.0-2</url>
+    <connection>scm:svn:http://svn.apache.org/repos/asf/tomee/javaee-api/trunk</connection>
+    <developerConnection>scm:svn:https://svn.apache.org/repos/asf/tomee/javaee-api/trunk</developerConnection>
+    <url>http://svn.apache.org/viewvc/tomee/javaee-api/trunk</url>
   </scm>
 
   <properties>
