@@ -19,6 +19,7 @@
 
 <features>
   <feature name="javaee-api" version="${project.version}">
+
     <bundle>mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/${geronimo-jta_1.1_spec.version}</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-activation_1.1_spec/${geronimo-activation_1.1_spec.version}</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-annotation_1.1_spec/${geronimo-annotation_1.1_spec.version}</bundle>
@@ -41,6 +42,8 @@
     <bundle>mvn:org.apache.geronimo.specs/geronimo-stax-api_1.2_spec/${geronimo-stax-api_1.2_spec.version}</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-validation_1.0_spec/${geronimo-validation_1.0_spec.version}</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-ws-metadata_2.0_spec/${geronimo-ws-metadata_2.0_spec.version}</bundle>
+
+    <!-- Jakarta APIs -->
 
     <!-- from Tomcat too -->
     <bundle>mvn:org.apache.geronimo.specs/geronimo-servlet_3.0_spec/${geronimo-servlet_3.0_spec.version}</bundle>
