@@ -55,7 +55,6 @@
 
     For APIs available in Tomcat such as Servlet, JSP, EL, we want to give Tomcat the priority.
     -->
-    <geronimo-activation_1.1_spec.version>1.1</geronimo-activation_1.1_spec.version>
     <geronimo-annotation_1.3_spec.version>1.2</geronimo-annotation_1.3_spec.version>
     <geronimo-atinject_1.0_spec.version>1.1</geronimo-atinject_1.0_spec.version>
     <geronimo-concurrent_1.0_spec.version>1.0-alpha-1</geronimo-concurrent_1.0_spec.version>
@@ -64,7 +63,6 @@
     <geronimo-j2ee-deployment_1.1_spec.version>1.1</geronimo-j2ee-deployment_1.1_spec.version>
     <geronimo-j2ee-management_1.1_spec.version>1.0.1</geronimo-j2ee-management_1.1_spec.version>
     <geronimo-jacc_1.4_spec.version>1.0</geronimo-jacc_1.4_spec.version>
-    <geronimo-javamail_1.4_spec.version>1.7.1</geronimo-javamail_1.4_spec.version>
     <geronimo-jaxb_2.2_spec.version>1.0.1</geronimo-jaxb_2.2_spec.version>
     <geronimo-jaxr_1.0_spec.version>2.1</geronimo-jaxr_1.0_spec.version>
     <geronimo-jaxrpc_1.1_spec.version>2.1</geronimo-jaxrpc_1.1_spec.version>
@@ -207,7 +205,7 @@
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <manifestEntries>
                     <Export-Package>
-                      javax.xml,javax.xml.ws,javax.xml.ws.handler,javax.xml.ws.handler.soap,javax.xml.ws.spi,javax.xml.ws.http,javax.xml.ws.soap,javax.xml.soap,javax.xml.namespace,javax.xml.registry,javax.xml.registry.infomodel,javax.xml.rpc,javax.xml.rpc.encoding,javax.xml.rpc.handler,javax.xml.rpc.handler.soap,javax.xml.rpc.holders,javax.xml.rpc.server,javax.xml.rpc.soap,javax.xml.stream,javax.xml.stream.events,javax.xml.stream.util,javax.xml.bind,javax.xml.bind.annotation,javax.xml.bind.annotation.adapters,javax.xml.bind.attachment,javax.xml.bind.helpers,javax.xml.bind.util,javax.activation,javax.annotation,javax.annotation.security,javax.ejb,javax.ejb.spi,javax.interceptor,javax.resource,javax.resource.cci,javax.resource.spi,javax.resource.spi.endpoint,javax.resource.spi.security,javax.resource.spi.work,javax.enterprise,javax.enterprise.deploy,javax.enterprise.deploy.model,javax.enterprise.deploy.model.exceptions,javax.enterprise.deploy.shared,javax.enterprise.deploy.shared.factories,javax.enterprise.deploy.spi,javax.enterprise.deploy.spi.exceptions,javax.enterprise.deploy.spi.factories,javax.enterprise.deploy.spi.status,javax.management,javax.management.j2ee,javax.management.j2ee.statistics,javax.security,javax.security.jacc,javax.jms,javax.persistence,javax.persistence.spi,javax.transaction,javax.transaction.xa,javax.jws,javax.jws.soap
+                      javax.xml,javax.xml.ws,javax.xml.ws.handler,javax.xml.ws.handler.soap,javax.xml.ws.spi,javax.xml.ws.http,javax.xml.ws.soap,javax.xml.soap,javax.xml.namespace,javax.xml.registry,javax.xml.registry.infomodel,javax.xml.rpc,javax.xml.rpc.encoding,javax.xml.rpc.handler,javax.xml.rpc.handler.soap,javax.xml.rpc.holders,javax.xml.rpc.server,javax.xml.rpc.soap,javax.xml.stream,javax.xml.stream.events,javax.xml.stream.util,javax.xml.bind,javax.xml.bind.annotation,javax.xml.bind.annotation.adapters,javax.xml.bind.attachment,javax.xml.bind.helpers,javax.xml.bind.util,javax.annotation,javax.annotation.security,javax.ejb,javax.ejb.spi,javax.interceptor,javax.resource,javax.resource.cci,javax.resource.spi,javax.resource.spi.endpoint,javax.resource.spi.security,javax.resource.spi.work,javax.enterprise,javax.enterprise.deploy,javax.enterprise.deploy.model,javax.enterprise.deploy.model.exceptions,javax.enterprise.deploy.shared,javax.enterprise.deploy.shared.factories,javax.enterprise.deploy.spi,javax.enterprise.deploy.spi.exceptions,javax.enterprise.deploy.spi.factories,javax.enterprise.deploy.spi.status,javax.management,javax.management.j2ee,javax.management.j2ee.statistics,javax.security,javax.security.jacc,javax.jms,javax.persistence,javax.persistence.spi,javax.transaction,javax.transaction.xa,javax.jws,javax.jws.soap
                     </Export-Package>
                     <Import-Package>org.apache.geronimo.osgi.registry.api;resolution:=optional</Import-Package>
                     <Private-Package>org.apache.geronimo.osgi.locator</Private-Package>
@@ -348,41 +346,11 @@
 
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-activation_1.1_spec</artifactId>
-      <version>${geronimo-activation_1.1_spec.version}</version>
-      <classifier>sources</classifier>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-activation_1.1_spec</artifactId>
-      <version>${geronimo-activation_1.1_spec.version}</version>
-      <optional>true</optional>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-javamail_1.4_spec</artifactId>
-      <version>${geronimo-javamail_1.4_spec.version}</version>
-      <classifier>sources</classifier>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
-      <artifactId>geronimo-javamail_1.4_spec</artifactId>
-      <version>${geronimo-javamail_1.4_spec.version}</version>
-      <optional>true</optional>
-    </dependency>
-
-    <!-- does not exist until we have an actual release
-    <dependency>
-      <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-security_1.0_spec</artifactId>
       <version>${geronimo-security_1.0_spec.version}</version>
       <classifier>sources</classifier>
       <optional>true</optional>
     </dependency>
-    -->
     <dependency>
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-security_1.0_spec</artifactId>
