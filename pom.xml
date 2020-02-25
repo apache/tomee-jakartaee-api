@@ -87,7 +87,7 @@
     <!-- Jakarta APIs -->
 
     <!-- We use servlet, jsp, jaspic, websocket, el straight from Tomcat APIs -->
-    <tomcat.version>9.0.22</tomcat.version>
+    <tomcat.version>9.0.31</tomcat.version>
   </properties>
 
 
