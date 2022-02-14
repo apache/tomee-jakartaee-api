@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.openejb.javaee.api.activator.org.apache.openejb.javaee.api.locator;
+package org.apache.tomee.jakartaee.api.locator;
 
 import java.io.BufferedReader;
 import java.io.File;

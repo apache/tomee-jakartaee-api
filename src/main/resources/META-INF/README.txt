@@ -1,4 +1,4 @@
-These are the archives used to create the Apache TomEE javaee-api-8.0-x.jar.
+These are the archives used to create the Apache TomEE jakartaee-api-9.0-x.jar.
 
 This archive exists as a way to replace the single javaee-api-8.0-x.jar for users
 who would rather have the individual API jars rather than one large

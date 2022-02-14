@@ -17,16 +17,13 @@
  * under the License.
  */
 
-
-package org.apache.openejb.javaee.api.activator;
+package org.apache.tomee.jakartaee.api.activator;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 /**
  * This exists only to call the 3 BundleActivators present in the un-amalgamated jars.
- *
- * @version $Rev$ $Date$
  */
 public class MultiActivator implements BundleActivator {
 
