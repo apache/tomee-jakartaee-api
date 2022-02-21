@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.apache</groupId>
     <artifactId>apache</artifactId>
-    <version>23</version>
+    <version>24</version>
     <relativePath><!--Resolve on repository--></relativePath>
   </parent>
 
@@ -38,11 +38,10 @@
   </prerequisites>
 
   <properties>
-    <geronimo-concurrent_1.0_spec.version>1.0-alpha-1</geronimo-concurrent_1.0_spec.version>
+
     <geronimo-j2ee-connector_1.6_spec.version>1.0</geronimo-j2ee-connector_1.6_spec.version>
     <geronimo-j2ee-deployment_1.1_spec.version>1.1</geronimo-j2ee-deployment_1.1_spec.version>
     <geronimo-j2ee-management_1.1_spec.version>1.0.1</geronimo-j2ee-management_1.1_spec.version>
-    <geronimo-jaxb_2.2_spec.version>1.0.1</geronimo-jaxb_2.2_spec.version>
     <geronimo-jaxr_1.0_spec.version>2.1</geronimo-jaxr_1.0_spec.version>
     <geronimo-jaxrpc_1.1_spec.version>2.1</geronimo-jaxrpc_1.1_spec.version>
     <geronimo-jcache_1.0_spec.version>1.0-alpha-1</geronimo-jcache_1.0_spec.version>
@@ -50,38 +49,44 @@
     <geronimo-stax-api_1.2_spec.version>1.2</geronimo-stax-api_1.2_spec.version>
 
     <!-- Web Profile -->
+    <jakarta.annotation-api.version>2.0.0</jakarta.annotation-api.version>
+    <jakarta.authentication-api.version>2.0.0</jakarta.authentication-api.version>
+    <jakarta.ejb-api.version>4.0.0</jakarta.ejb-api.version>
+    <jakarta.el-api.version>4.0.0</jakarta.el-api.version>
+    <jakarta.enterprise.cdi-api.version>3.0.0</jakarta.enterprise.cdi-api.version>
+    <jakarta.faces-api.version>3.0.0</jakarta.faces-api.version>
+    <jakarta.inject.version>2.0.0</jakarta.inject.version>
+    <jakarta.interceptor-api.version>2.0.0</jakarta.interceptor-api.version>
+    <jakarta.json-api.version>2.0.1</jakarta.json-api.version>
+    <jakarta.json.bind-api.version>2.0.0</jakarta.json.bind-api.version>
+    <jakarta.persistence-api.version>3.0.0</jakarta.persistence-api.version>
+    <jakarta.security.enterprise-api.version>2.0.0</jakarta.security.enterprise-api.version>
     <jakarta.servlet-api.version>5.0.0</jakarta.servlet-api.version>
     <jakarta.servlet.jsp-api.version>3.0.0</jakarta.servlet.jsp-api.version>
     <jakarta.servlet.jsp.jstl-api.version>2.0.0</jakarta.servlet.jsp.jstl-api.version>
-    <jakarta.faces-api.version>3.0.0</jakarta.faces-api.version>
-    <jakarta.el-api.version>4.0.0</jakarta.el-api.version>
-    <jakarta.websocket-api.version>2.0.0</jakarta.websocket-api.version>
-    <jakarta.json-api.version>2.0.1</jakarta.json-api.version>
-    <jakarta.json.bind-api.version>2.0.0</jakarta.json.bind-api.version>
-    <jakarta.annotation-api.version>2.0.0</jakarta.annotation-api.version>
-    <jakarta.ejb-api.version>4.0.0</jakarta.ejb-api.version>
     <jakarta.transaction-api.version>2.0.0</jakarta.transaction-api.version>
-    <jakarta.persistence-api.version>3.0.0</jakarta.persistence-api.version>
     <jakarta.validation-api.version>3.0.0</jakarta.validation-api.version>
-    <jakarta.interceptor-api.version>2.0.0</jakarta.interceptor-api.version>
-    <jakarta.enterprise.cdi-api.version>3.0.0</jakarta.enterprise.cdi-api.version>
-    <jakarta.inject.version>2.0.0</jakarta.inject.version>
-    <jakarta.authentication-api.version>2.0.0</jakarta.authentication-api.version>
-    <jakarta.security.enterprise-api.version>2.0.0</jakarta.security.enterprise-api.version>
+    <jakarta.websocket-api.version>2.0.0</jakarta.websocket-api.version>
     <jakarta.ws.rs-api.version>3.0.0</jakarta.ws.rs-api.version>
+
     <!--  Full platform -->
-    <jakarta.jms-api.version>3.0.0</jakarta.jms-api.version>
     <jakarta.activation-api.version>2.0.1</jakarta.activation-api.version>
+    <jakarta.authorization-api.version>2.0.0</jakarta.authorization-api.version>
+    <jakarta.batch-api.version>2.0.0</jakarta.batch-api.version>
+    <jakarta.enterprise.concurrent-api.version>2.0.0</jakarta.enterprise.concurrent-api.version>
+    <jakarta.jms-api.version>3.0.0</jakarta.jms-api.version>
     <jakarta.mail-api.version>2.0.1</jakarta.mail-api.version>
     <jakarta.resource-api.version>2.0.0</jakarta.resource-api.version>
-    <jakarta.authorization-api.version>2.0.0</jakarta.authorization-api.version>
-    <jakarta.enterprise.concurrent-api.version>2.0.0</jakarta.enterprise.concurrent-api.version>
-    <jakarta.batch-api.version>2.0.0</jakarta.batch-api.version>
+
     <!-- Optional APIs -->
-    <jakarta.xml.bind-api.version>3.0.1</jakarta.xml.bind-api.version>
-    <jakarta.xml.ws-api.version>3.0.1</jakarta.xml.ws-api.version>
-    <jakarta.xml.soap-api.version>2.0.1</jakarta.xml.soap-api.version>
     <jakarta.jws-api.version>3.0.0</jakarta.jws-api.version>
+    <jakarta.xml.bind-api.version>3.0.1</jakarta.xml.bind-api.version>
+    <jakarta.xml.soap-api.version>2.0.1</jakarta.xml.soap-api.version>
+    <jakarta.xml.ws-api.version>3.0.1</jakarta.xml.ws-api.version>
+
+    <!-- Reproducible builds see https://maven.apache.org/guides/mini/guide-reproducible-builds.html -->
+    <!-- project.build.outputTimestamp is updated by maven-release-plugin during release -->
+    <project.build.outputTimestamp>2022-02-21T09:00:00Z</project.build.outputTimestamp>
   </properties>
 
 
@@ -107,6 +112,7 @@
       </plugin>
 
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-clean-plugin</artifactId>
         <version>3.1.0</version>
         <executions>
@@ -136,18 +142,21 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
-        <version>2.6</version>
+        <version>3.3.0</version>
         <executions>
           <execution>
             <id>jakartaee-api-libs</id>
             <phase>package</phase>
             <goals>
-              <goal>attached</goal>
+              <goal>single</goal>
             </goals>
             <configuration>
               <finalName>jakartaee-api-libs-${project.version}</finalName>
               <appendAssemblyId>false</appendAssemblyId>
-              <descriptor>src/main/assembly/jakartaee-api-libs.xml</descriptor>
+              <attach>true</attach>
+              <descriptors>
+                <descriptor>src/main/assembly/jakartaee-api-libs.xml</descriptor>
+              </descriptors>
             </configuration>
           </execution>
         </executions>
@@ -156,7 +165,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.2.1</version>
+        <version>3.2.4</version>
         <executions>
           <execution>
             <id>jakartaee-api-tomcat</id>
@@ -287,7 +296,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <version>3.0.0</version>
+        <version>3.3.0</version>
         <executions>
           <execution>
             <id>attach-artifacts</id>

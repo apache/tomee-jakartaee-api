@@ -20,35 +20,44 @@
 <features>
   <feature name="jakartaee-api" version="${project.version}">
 
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/${geronimo-jta_1.1_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-activation_1.1_spec/${geronimo-activation_1.1_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-annotation_1.1_spec/${geronimo-annotation_1.1_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-atinject_1.0_spec/${geronimo-atinject_1.0_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-ejb_3.1_spec/${geronimo-ejb_3.1_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-interceptor_1.1_spec/${geronimo-interceptor_1.1_spec.version}</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-j2ee-connector_1.6_spec/${geronimo-j2ee-connector_1.6_spec.version}</bundle>
     <bundle>wrap:mvn:org.apache.geronimo.specs/geronimo-j2ee-deployment_1.1_spec/${geronimo-j2ee-deployment_1.1_spec.version}</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-j2ee-management_1.1_spec/${geronimo-j2ee-management_1.1_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-jacc_1.4_spec/${geronimo-jacc_1.4_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-jaxb_2.2_spec/${geronimo-jaxb_2.2_spec.version}</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-jaxr_1.0_spec/${geronimo-jaxr_1.0_spec.version}</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-jaxrpc_1.1_spec/${geronimo-jaxrpc_1.1_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-jaxrs_1.1_spec/${geronimo-jaxrs_1.1_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-jaxws_2.2_spec/${geronimo-jaxws_2.2_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-jcdi_1.0_spec/${geronimo-jcdi_1.0_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-jms_1.1_spec/${geronimo-jms_1.1_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-jpa_2.0_spec/${geronimo-jpa_2.0_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-saaj_1.3_spec/${geronimo-saaj_1.3_spec.version}</bundle>
     <bundle>mvn:org.apache.geronimo.specs/geronimo-stax-api_1.2_spec/${geronimo-stax-api_1.2_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-validation_1.0_spec/${geronimo-validation_1.0_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-ws-metadata_2.0_spec/${geronimo-ws-metadata_2.0_spec.version}</bundle>
 
     <!-- Jakarta APIs -->
+    <bundle>wrap:mvn:jakarta.activation/jakarta.activation-api/${jakarta.activation-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.annotation/jakarta.annotation-api/${jakarta.annotation-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.authentication/jakarta.authentication-api/${jakarta.authentication-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.authorization/jakarta.authorization-api/${jakarta.authorization-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.batch/jakarta.batch-api/${jakarta.batch-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.ejb/jakarta.ejb-api/${jakarta.ejb-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.el/jakarta.el-api/${jakarta.el-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.enterprise.concurrent/jakarta.enterprise.concurrent-api/${jakarta.enterprise.concurrent-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.enterprise/jakarta.enterprise.cdi-api/${jakarta.enterprise.cdi-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.faces/jakarta.faces-api/${jakarta.faces-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.inject/jakarta.inject-api/${jakarta.inject.version}</bundle>
+    <bundle>wrap:mvn:jakarta.interceptor/jakarta.interceptor-api/${jakarta.interceptor-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.jms/jakarta.jms-api/${jakarta.jms-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.json.bind/jakarta.json.bind-api/${jakarta.json.bind-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.json/jakarta.json-api/${jakarta.json-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.jws/jakarta.jws-api/${jakarta.jws-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.mail/jakarta.mail-api/${jakarta.mail-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.persistence/jakarta.persistence-api/${jakarta.persistence-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.resource/jakarta.resource-api/${jakarta.resource-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.security.enterprise/jakarta.security.enterprise-api/${jakarta.security.enterprise-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/${jakarta.servlet.jsp.jstl-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.servlet.jsp/jakarta.servlet.jsp-api/${jakarta.servlet.jsp-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.servlet/jakarta.servlet-api/${jakarta.servlet-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.transaction/jakarta.transaction-api/${jakarta.transaction-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.validation/jakarta.validation-api/${jakarta.validation-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.websocket/jakarta.websocket-api/${jakarta.websocket-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.ws.rs/jakarta.ws.rs-api/${jakarta.ws.rs-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta.xml.bind-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.xml.soap/jakarta.xml.soap-api/${jakarta.xml.soap-api.version}</bundle>
+    <bundle>wrap:mvn:jakarta.xml.ws/jakarta.xml.ws-api/${jakarta.xml.ws-api.version}</bundle>
 
-    <!-- from Tomcat too -->
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-servlet_3.0_spec/${geronimo-servlet_3.0_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-jsp_2.2_spec/${geronimo-jsp_2.2_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-el_2.2_spec/${geronimo-el_2.2_spec.version}</bundle>
-    <bundle>mvn:org.apache.geronimo.specs/geronimo-jaspic_1.0_spec/${geronimo-jaspic_1.0_spec.version}</bundle>
   </feature>
 </features>
