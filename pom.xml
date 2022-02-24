@@ -23,7 +23,7 @@
     <groupId>org.apache</groupId>
     <artifactId>apache</artifactId>
     <version>24</version>
-    <relativePath><!--Resolve on repository--></relativePath>
+    <relativePath/> <!--Resolve on repository-->
   </parent>
 
   <groupId>org.apache.tomee</groupId>
