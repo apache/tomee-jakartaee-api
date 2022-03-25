@@ -1013,11 +1013,11 @@
       <classifier>sources</classifier>
       <optional>true</optional>
     </dependency>
+    -->
     <dependency>
       <groupId>jakarta.security.enterprise</groupId>
       <artifactId>jakarta.security.enterprise-api</artifactId>
     </dependency>
-    -->
     <dependency>
       <groupId>jakarta.security.enterprise</groupId>
       <artifactId>jakarta.security.enterprise-api</artifactId>
@@ -1179,6 +1179,20 @@
       <groupId>org.apache.geronimo.specs</groupId>
       <artifactId>geronimo-j2ee-deployment_1.1_spec</artifactId>
       <version>${geronimo-j2ee-deployment_1.1_spec.version}</version>
+      <optional>true</optional>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-j2ee-management_1.1_spec</artifactId>
+      <version>${geronimo-j2ee-management_1.1_spec.version}</version>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-j2ee-management_1.1_spec</artifactId>
+      <version>${geronimo-j2ee-management_1.1_spec.version}</version>
       <optional>true</optional>
     </dependency>
 
