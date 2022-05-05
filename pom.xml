@@ -82,7 +82,8 @@
     <tomcat.version>10.0.16</tomcat.version>
 
     <!--  Full platform -->
-    <jakarta.activation-api.version>2.0.1</jakarta.activation-api.version>
+    <geronimo-activation_2.0_spec.version>1.0.0-SNAPSHOT</geronimo-activation_2.0_spec.version>
+    <!--<jakarta.activation-api.version>2.0.1</jakarta.activation-api.version>-->
     <jakarta.authorization-api.version>2.0.0</jakarta.authorization-api.version>
     <jakarta.batch-api.version>2.0.0</jakarta.batch-api.version>
     <jakarta.enterprise.concurrent-api.version>2.0.0</jakarta.enterprise.concurrent-api.version>
@@ -609,6 +610,19 @@
         <optional>true</optional>
       </dependency>
       <dependency>
+        <groupId>org.apache.geronimo.specs</groupId>
+        <artifactId>geronimo-activation_2.0_spec</artifactId>
+        <version>${geronimo-activation_2.0_spec.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.geronimo.specs</groupId>
+        <artifactId>geronimo-activation_2.0_spec</artifactId>
+        <version>${geronimo-activation_2.0_spec.version}</version>
+        <classifier>sources</classifier>
+        <optional>true</optional>
+      </dependency>
+      <!-- we use Geronimo here because there is an implementation part
+      <dependency>
         <groupId>jakarta.activation</groupId>
         <artifactId>jakarta.activation-api</artifactId>
         <version>${jakarta.activation-api.version}</version>
@@ -620,7 +634,6 @@
         <classifier>sources</classifier>
         <optional>true</optional>
       </dependency>
-      <!-- we use Geronimo here because there is an implementation part
       <dependency>
         <groupId>jakarta.mail</groupId>
         <artifactId>jakarta.mail-api</artifactId>
@@ -1037,6 +1050,18 @@
       <optional>true</optional>
     </dependency>
     <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-activation_2.0_spec</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-activation_2.0_spec</artifactId>
+      <classifier>sources</classifier>
+      <optional>true</optional>
+    </dependency>
+
+    <!-- we use Geronimo here because there is an implementation part
+    <dependency>
       <groupId>jakarta.activation</groupId>
       <artifactId>jakarta.activation-api</artifactId>
     </dependency>
@@ -1046,8 +1071,6 @@
       <classifier>sources</classifier>
       <optional>true</optional>
     </dependency>
-
-    <!-- we use Geronimo here because there is an implementation part
     <dependency>
       <groupId>jakarta.mail</groupId>
       <artifactId>jakarta.mail-api</artifactId>
