@@ -80,7 +80,7 @@
     <tomcat.version>10.0.21</tomcat.version>
 
     <!--  Full platform -->
-    <geronimo-activation_2.0_spec.version>1.0.0-SNAPSHOT</geronimo-activation_2.0_spec.version>
+    <geronimo-activation_2.0_spec.version>1.0.0-M1</geronimo-activation_2.0_spec.version>
     <!--<jakarta.activation-api.version>2.0.1</jakarta.activation-api.version>-->
     <jakarta.authorization-api.version>2.0.0</jakarta.authorization-api.version>
     <jakarta.batch-api.version>2.0.0</jakarta.batch-api.version>
