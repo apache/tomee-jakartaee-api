@@ -59,6 +59,8 @@
     <jakarta.ejb-api.version>4.0.1</jakarta.ejb-api.version>
     <jakarta.el-api.version>5.0.1</jakarta.el-api.version>
     <jakarta.enterprise.cdi-api.version>4.0.1</jakarta.enterprise.cdi-api.version>
+    <jakarta.enterprise.lang-model-api.version>4.0.1</jakarta.enterprise.lang-model-api.version>
+
     <!--
     <jakarta.faces-api.version>3.0.0</jakarta.faces-api.version>
     -->
@@ -554,6 +556,18 @@
             <artifactId>jakarta.inject-api</artifactId>
           </exclusion>
         </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.enterprise</groupId>
+        <artifactId>jakarta.enterprise.lang-model</artifactId>
+        <version>${jakarta.enterprise.lang-model-api.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.enterprise</groupId>
+        <artifactId>jakarta.enterprise.lang-model</artifactId>
+        <version>${jakarta.enterprise.lang-model-api.version}</version>
+        <classifier>sources</classifier>
+        <optional>true</optional>
       </dependency>
       <dependency>
         <groupId>jakarta.inject</groupId>
