@@ -31,7 +31,7 @@
   <version>10.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Apache TomEE :: Jakarta EE 9 Full API</name>
+  <name>Apache TomEE :: Jakarta EE 10 Full API</name>
 
   <prerequisites>
     <maven>3.0</maven>
