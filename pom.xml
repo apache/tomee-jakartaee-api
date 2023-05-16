@@ -114,6 +114,20 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+        <configuration>
+          <!-- the following settings are important when working with git -->
+          <localCheckout>true</localCheckout>
+          <pushChanges>false</pushChanges>
+          <releaseProfiles />
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <arguments>-DskipTests -DfailIfNoTests=false -Dadditionalparam=-Xdoclint:none -DadditionalJOption=-Xdoclint:none ${arguments}</arguments>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
