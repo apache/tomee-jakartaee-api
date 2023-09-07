@@ -79,11 +79,11 @@
     <jakarta.ws.rs-api.version>3.1.0</jakarta.ws.rs-api.version>
 
     <!-- We use servlet, jsp, jaspic, websocket, el straight from Tomcat APIs -->
-    <tomcat.version>10.1.4</tomcat.version>
+    <tomcat.version>10.1.13</tomcat.version>
 
     <!--  Full platform -->
-    <geronimo-activation_2.0_spec.version>1.0.0</geronimo-activation_2.0_spec.version>
-    <!--<jakarta.activation-api.version>2.0.1</jakarta.activation-api.version>-->
+<!--    <geronimo-activation_2.0_spec.version>1.0.0</geronimo-activation_2.0_spec.version>-->
+    <jakarta.activation-api.version>2.1.2</jakarta.activation-api.version>
     <jakarta.authorization-api.version>2.1.0</jakarta.authorization-api.version>
     <jakarta.batch-api.version>2.1.1</jakarta.batch-api.version>
     <jakarta.enterprise.concurrent-api.version>3.0.2</jakarta.enterprise.concurrent-api.version>
