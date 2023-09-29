@@ -33,14 +33,10 @@
 
   <name>Apache TomEE :: Jakarta EE 10 Full API</name>
 
-  <prerequisites>
-    <maven>3.0</maven>
-  </prerequisites>
-
   <scm>
-    <connection>scm:git:https://gitbox.apache.org/repos/asf/tomee-jakartaee-api.git</connection>
-    <developerConnection>scm:git:https://gitbox.apache.org/repos/asf/tomee-jakartaee-api.git</developerConnection>
-    <url>https://gitbox.apache.org/repos/asf?p=tomee-jakartaee-api.git</url>
+    <connection>scm:git:https://github.com/apache/tomee-jakartaee-api.git</connection>
+    <developerConnection>scm:git:git@github.com:apache/tomee-jakartaee-api.git</developerConnection>
+    <url>https://github.com/apache/tomee-jakartaee-api.git</url>
     <tag>HEAD</tag>
   </scm>
 
