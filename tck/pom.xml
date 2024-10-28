@@ -38,13 +38,6 @@
         <tck.sha256>c3c7e37ceeb4073d3cbf70826563ea1c37ad85fd9ff180f7e3330e2cd73b934d</tck.sha256>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>jakarta.tck</groupId>
-            <artifactId>sigtest-maven-plugin</artifactId>
-            <version>2.3</version>
-        </dependency>
-    </dependencies>
     <build>
         <plugins>
             <plugin>
