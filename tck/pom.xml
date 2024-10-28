@@ -16,18 +16,16 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.apache.tomee</groupId>
         <artifactId>jakartaee-api-parent</artifactId>
-        <version>10.0-SNAPSHOT</version>
+        <version>10.0</version>
     </parent>
 
     <artifactId>jakartaee-api-tck</artifactId>
-    <version>10.0-SNAPSHOT</version>
+    <version>10.0</version>
     <packaging>pom</packaging>
 
     <name>Apache TomEE :: Jakarta EE 10 Full API :: Signature Tests</name>
@@ -72,9 +70,7 @@
                         </goals>
                         <configuration>
                             <target>
-                                <unzip src="${project.build.directory}/tck/${tck.file}"
-                                       dest="${project.build.directory}/"
-                                       overwrite="true" />
+                                <unzip src="${project.build.directory}/tck/${tck.file}" dest="${project.build.directory}/" overwrite="true" />
                             </target>
                         </configuration>
                     </execution>

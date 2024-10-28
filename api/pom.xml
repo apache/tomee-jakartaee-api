@@ -16,14 +16,13 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.apache.tomee</groupId>
         <artifactId>jakartaee-api-parent</artifactId>
-        <version>10.0-SNAPSHOT</version>
+        <version>10.0</version>
     </parent>
 
     <artifactId>jakartaee-api</artifactId>
@@ -202,8 +201,7 @@
                                 </filter>
                             </filters>
                             <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
                                         <Export-Package>
                                             jakarta.xml,jakarta.xml.ws,jakarta.xml.ws.handler,jakarta.xml.ws.handler.soap,jakarta.xml.ws.spi,jakarta.xml.ws.http,jakarta.xml.ws.soap,jakarta.xml.soap,jakarta.xml.namespace,jakarta.xml.registry,jakarta.xml.registry.infomodel,jakarta.xml.rpc,jakarta.xml.rpc.encoding,jakarta.xml.rpc.handler,jakarta.xml.rpc.handler.soap,jakarta.xml.rpc.holders,jakarta.xml.rpc.server,jakarta.xml.rpc.soap,jakarta.xml.stream,jakarta.xml.stream.events,jakarta.xml.stream.util,jakarta.xml.bind,jakarta.xml.bind.annotation,jakarta.xml.bind.annotation.adapters,jakarta.xml.bind.attachment,jakarta.xml.bind.helpers,jakarta.xml.bind.util,jakarta.annotation,jakarta.annotation.security,jakarta.ejb,jakarta.ejb.spi,jakarta.interceptor,jakarta.resource,jakarta.resource.cci,jakarta.resource.spi,jakarta.resource.spi.endpoint,jakarta.resource.spi.security,jakarta.resource.spi.work,jakarta.enterprise,jakarta.enterprise.deploy,jakarta.enterprise.deploy.model,jakarta.enterprise.deploy.model.exceptions,jakarta.enterprise.deploy.shared,jakarta.enterprise.deploy.shared.factories,jakarta.enterprise.deploy.spi,jakarta.enterprise.deploy.spi.exceptions,jakarta.enterprise.deploy.spi.factories,jakarta.enterprise.deploy.spi.status,jakarta.management,jakarta.management.j2ee,jakarta.management.j2ee.statistics,jakarta.security,jakarta.security.jacc,jakarta.jms,jakarta.persistence,jakarta.persistence.spi,jakarta.transaction,jakarta.transaction.xa,jakarta.jws,jakarta.jws.soap
@@ -220,13 +218,11 @@
                                         <Bundle-Name>${project.name}</Bundle-Name>
                                     </manifestEntries>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
                                     <resource>META-INF/LICENSE</resource>
                                     <file>${project.basedir}/src/main/legal/META-INF/tomcat/LICENSE</file>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
                                     <resource>META-INF/NOTICE</resource>
                                     <file>${project.basedir}/src/main/legal/META-INF/tomcat/NOTICE</file>
                                 </transformer>
@@ -267,8 +263,7 @@
                                 </filter>
                             </filters>
                             <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <manifestEntries>
                                         <Export-Package>
                                             jakarta.xml,jakarta.xml.ws,jakarta.xml.ws.handler,jakarta.xml.ws.handler.soap,jakarta.xml.ws.spi,jakarta.xml.ws.http,jakarta.xml.ws.soap,jakarta.xml.soap,jakarta.xml.namespace,jakarta.xml.registry,jakarta.xml.registry.infomodel,jakarta.xml.rpc,jakarta.xml.rpc.encoding,jakarta.xml.rpc.handler,jakarta.xml.rpc.handler.soap,jakarta.xml.rpc.holders,jakarta.xml.rpc.server,jakarta.xml.rpc.soap,jakarta.xml.stream,jakarta.xml.stream.events,jakarta.xml.stream.util,jakarta.xml.bind,jakarta.xml.bind.annotation,jakarta.xml.bind.annotation.adapters,jakarta.xml.bind.attachment,jakarta.xml.bind.helpers,jakarta.xml.bind.util,jakarta.activation,jakarta.annotation,jakarta.annotation.security,jakarta.ejb,jakarta.ejb.spi,jakarta.interceptor,jakarta.resource,jakarta.resource.cci,jakarta.resource.spi,jakarta.resource.spi.endpoint,jakarta.resource.spi.security,jakarta.resource.spi.work,jakarta.enterprise,jakarta.enterprise.deploy,jakarta.enterprise.deploy.model,jakarta.enterprise.deploy.model.exceptions,jakarta.enterprise.deploy.shared,jakarta.enterprise.deploy.shared.factories,jakarta.enterprise.deploy.spi,jakarta.enterprise.deploy.spi.exceptions,jakarta.enterprise.deploy.spi.factories,jakarta.enterprise.deploy.spi.status,jakarta.management,jakarta.management.j2ee,jakarta.management.j2ee.statistics,jakarta.security,jakarta.security.jacc,jakarta.jms,jakarta.persistence,jakarta.persistence.spi,jakarta.transaction,jakarta.transaction.xa,jakarta.servlet,jakarta.servlet.http,jakarta.servlet.resources,jakarta.jws,jakarta.ws.rs,jakarta.jws.soap
@@ -287,18 +282,15 @@
                                         <Bundle-Name>${project.name}</Bundle-Name>
                                     </manifestEntries>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
                                     <resource>META-INF/LICENSE</resource>
                                     <file>${project.basedir}/src/main/legal/META-INF/all/LICENSE</file>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
                                     <resource>META-INF/NOTICE</resource>
                                     <file>${project.basedir}/src/main/legal/META-INF/all/NOTICE</file>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer">
                                 </transformer>
                             </transformers>
                         </configuration>
