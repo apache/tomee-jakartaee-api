@@ -64,7 +64,7 @@
         <jakarta.ws.rs-api.version>3.1.0</jakarta.ws.rs-api.version>
 
         <!-- We use servlet, jsp, jaspic, websocket, el straight from Tomcat APIs -->
-        <tomcat.version>10.1.13</tomcat.version>
+        <tomcat.version>10.1.31</tomcat.version>
 
         <!--  Full platform -->
         <geronimo-activation_2.0_spec.version>1.0.0</geronimo-activation_2.0_spec.version>
