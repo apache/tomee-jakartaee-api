@@ -27,7 +27,7 @@
 
     <artifactId>jakartaee-api</artifactId>
 
-    <name>Apache TomEE :: Jakarta EE 10 Full API</name>
+    <name>Apache TomEE :: Jakarta EE 10 (with JPA 3.2) Full API</name>
 
     <properties>
         <geronimo-j2ee-connector_1.6_spec.version>1.0</geronimo-j2ee-connector_1.6_spec.version>
@@ -52,7 +52,9 @@
         <jakarta.interceptor-api.version>2.1.0</jakarta.interceptor-api.version>
         <jakarta.json-api.version>2.1.1</jakarta.json-api.version>
         <jakarta.json.bind-api.version>3.0.0</jakarta.json.bind-api.version>
-        <jakarta.persistence-api.version>3.1.0</jakarta.persistence-api.version>
+
+        <!-- Override this on purpose to allow end users to use Hibernate 7 - should be JPA 3.1 for EE10 -->
+        <jakarta.persistence-api.version>3.2.0</jakarta.persistence-api.version>
         <jakarta.security.enterprise-api.version>3.0.0</jakarta.security.enterprise-api.version>
         <jakarta.servlet-api.version>6.0.0</jakarta.servlet-api.version>
         <jakarta.servlet.jsp-api.version>3.1.0</jakarta.servlet.jsp-api.version>

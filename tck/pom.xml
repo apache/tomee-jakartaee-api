@@ -28,7 +28,7 @@
     <version>10.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Apache TomEE :: Jakarta EE 10 Full API :: Signature Tests</name>
+    <name>Apache TomEE :: Jakarta EE 10 (with JPA 3.2) Full API :: Signature Tests</name>
 
     <properties>
         <tck.file>jakarta-jakartaeetck-10.0.6.zip</tck.file>
@@ -292,19 +292,20 @@
 <!--                            <packages>jakarta.mail.**</packages>-->
 <!--                        </configuration>-->
 <!--                    </execution>-->
-                    <execution>
-                        <id>check-jakarta-persistence</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <configuration>
-                            <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.persistence.sig</sigfile>
-                            <action>strictcheck</action>
-                            <failOnError>true</failOnError>
-                            <packages>jakarta.persistence.**</packages>
-                        </configuration>
-                    </execution>
+                    <!-- This is overridden with JPA 3.2 for Hibernate 7.x compatibility on purpose, so do not check it. -->
+<!--                    <execution>-->
+<!--                        <id>check-jakarta-persistence</id>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <ignoreJDKClass>true</ignoreJDKClass>-->
+<!--                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.persistence.sig</sigfile>-->
+<!--                            <action>strictcheck</action>-->
+<!--                            <failOnError>true</failOnError>-->
+<!--                            <packages>jakarta.persistence.**</packages>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
                     <execution>
                         <id>check-jakarta-resource</id>
                         <goals>
