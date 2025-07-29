@@ -28,7 +28,7 @@
 
   <groupId>org.apache.tomee</groupId>
   <artifactId>jakartaee-api-parent</artifactId>
-  <version>10.1-SNAPSHOT</version>
+  <version>10.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Apache TomEE :: Jakarta EE 10 Full API :: Parent</name>
@@ -52,7 +52,7 @@
 
     <!-- Reproducible builds see https://maven.apache.org/guides/mini/guide-reproducible-builds.html -->
     <!-- project.build.outputTimestamp is updated by maven-release-plugin during release -->
-    <project.build.outputTimestamp>2024-10-28T08:20:03Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2025-07-29T18:28:18Z</project.build.outputTimestamp>
 
   </properties>
 
