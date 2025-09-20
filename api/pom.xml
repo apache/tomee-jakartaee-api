@@ -22,12 +22,12 @@
     <parent>
         <groupId>org.apache.tomee</groupId>
         <artifactId>jakartaee-api-parent</artifactId>
-        <version>10.0.2-SNAPSHOT</version>
+        <version>11.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>jakartaee-api</artifactId>
 
-    <name>Apache TomEE :: Jakarta EE 10 Full API</name>
+    <name>Apache TomEE :: Jakarta EE 11 Full API</name>
 
     <properties>
         <geronimo-j2ee-connector_1.6_spec.version>1.0</geronimo-j2ee-connector_1.6_spec.version>

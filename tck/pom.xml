@@ -21,14 +21,14 @@
     <parent>
         <groupId>org.apache.tomee</groupId>
         <artifactId>jakartaee-api-parent</artifactId>
-        <version>10.0.2-SNAPSHOT</version>
+        <version>11.0.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>jakartaee-api-tck</artifactId>
-    <version>10.0.2-SNAPSHOT</version>
+    <version>11.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Apache TomEE :: Jakarta EE 10 Full API :: Signature Tests</name>
+    <name>Apache TomEE :: Jakarta EE 11 Full API :: Signature Tests</name>
 
     <properties>
         <tck.file>jakarta-jakartaeetck-10.0.6.zip</tck.file>
