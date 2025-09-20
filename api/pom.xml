@@ -38,48 +38,46 @@
         <geronimo-osgi.version>1.1</geronimo-osgi.version>
 
         <!-- Web Profile -->
-        <jakarta.annotation-api.version>2.1.1</jakarta.annotation-api.version>
-        <jakarta.authentication-api.version>3.0.0</jakarta.authentication-api.version>
+        <jakarta.annotation-api.version>3.0.0</jakarta.annotation-api.version>
+        <jakarta.authentication-api.version>3.1.0</jakarta.authentication-api.version>
         <jakarta.ejb-api.version>4.0.1</jakarta.ejb-api.version>
         <jakarta.el-api.version>5.0.1</jakarta.el-api.version>
-        <jakarta.enterprise.cdi-api.version>4.0.1</jakarta.enterprise.cdi-api.version>
+        <jakarta.enterprise.cdi-api.version>4.1.0</jakarta.enterprise.cdi-api.version>
         <jakarta.enterprise.lang-model-api.version>4.0.1</jakarta.enterprise.lang-model-api.version>
 
         <!--
         <jakarta.faces-api.version>3.0.0</jakarta.faces-api.version>
         -->
         <jakarta.inject.version>2.0.0</jakarta.inject.version>
-        <jakarta.interceptor-api.version>2.1.0</jakarta.interceptor-api.version>
+        <jakarta.interceptor-api.version>2.2.0</jakarta.interceptor-api.version>
         <jakarta.json-api.version>2.1.1</jakarta.json-api.version>
         <jakarta.json.bind-api.version>3.0.0</jakarta.json.bind-api.version>
-        <jakarta.persistence-api.version>3.1.0</jakarta.persistence-api.version>
-        <jakarta.security.enterprise-api.version>3.0.0</jakarta.security.enterprise-api.version>
+        <jakarta.persistence-api.version>3.2.0</jakarta.persistence-api.version>
+        <jakarta.security.enterprise-api.version>4.0.0</jakarta.security.enterprise-api.version>
         <jakarta.servlet-api.version>6.0.0</jakarta.servlet-api.version>
         <jakarta.servlet.jsp-api.version>3.1.0</jakarta.servlet.jsp-api.version>
         <jakarta.servlet.jsp.jstl-api.version>3.0.0</jakarta.servlet.jsp.jstl-api.version>
         <jakarta.transaction-api.version>2.0.1</jakarta.transaction-api.version>
-        <jakarta.validation-api.version>3.0.2</jakarta.validation-api.version>
-        <jakarta.websocket-api.version>2.1.0</jakarta.websocket-api.version>
-        <jakarta.ws.rs-api.version>3.1.0</jakarta.ws.rs-api.version>
+        <jakarta.validation-api.version>3.1.1</jakarta.validation-api.version>
+        <jakarta.websocket-api.version>2.2.0</jakarta.websocket-api.version>
+        <jakarta.ws.rs-api.version>4.0.0</jakarta.ws.rs-api.version>
+        <jakarta.data-api.version>1.0.1</jakarta.data-api.version>
 
         <!-- We use servlet, jsp, jaspic, websocket, el straight from Tomcat APIs -->
-        <tomcat.version>10.1.31</tomcat.version>
+        <tomcat.version>11.0.11</tomcat.version>
 
         <!--  Full platform -->
         <geronimo-activation_2.0_spec.version>1.0.0</geronimo-activation_2.0_spec.version>
         <!--    <jakarta.activation-api.version>2.1.2</jakarta.activation-api.version>-->
-        <jakarta.authorization-api.version>2.1.0</jakarta.authorization-api.version>
+        <jakarta.authorization-api.version>3.0.0</jakarta.authorization-api.version>
         <jakarta.batch-api.version>2.1.1</jakarta.batch-api.version>
-        <jakarta.enterprise.concurrent-api.version>3.0.2</jakarta.enterprise.concurrent-api.version>
+        <jakarta.enterprise.concurrent-api.version>3.1.1</jakarta.enterprise.concurrent-api.version>
         <jakarta.jms-api.version>3.1.0</jakarta.jms-api.version>
         <jakarta.mail-api.version>2.1.0</jakarta.mail-api.version>
         <jakarta.resource-api.version>2.1.0</jakarta.resource-api.version>
 
         <!-- Optional APIs -->
         <jakarta.jws-api.version>3.0.0</jakarta.jws-api.version>
-        <jakarta.xml.bind-api.version>4.0.0</jakarta.xml.bind-api.version>
-        <jakarta.xml.soap-api.version>3.0.0</jakarta.xml.soap-api.version>
-        <jakarta.xml.ws-api.version>4.0.0</jakarta.xml.ws-api.version>
     </properties>
 
 
@@ -607,6 +605,18 @@
                 <classifier>sources</classifier>
                 <optional>true</optional>
             </dependency>
+            <dependency>
+                <groupId>jakarta.data</groupId>
+                <artifactId>jakarta.data-api</artifactId>
+                <version>${jakarta.data-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.data</groupId>
+                <artifactId>jakarta.data-api</artifactId>
+                <version>${jakarta.data-api.version}</version>
+                <classifier>sources</classifier>
+                <optional>true</optional>
+            </dependency>
 
             <!-- Full Platform -->
             <dependency>
@@ -680,6 +690,12 @@
                 <groupId>jakarta.authorization</groupId>
                 <artifactId>jakarta.authorization-api</artifactId>
                 <version>${jakarta.authorization-api.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.servlet</groupId>
+                        <artifactId>jakarta.servlet-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>jakarta.authorization</groupId>
@@ -687,6 +703,12 @@
                 <version>${jakarta.authorization-api.version}</version>
                 <classifier>sources</classifier>
                 <optional>true</optional>
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.servlet</groupId>
+                        <artifactId>jakarta.servlet-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>jakarta.enterprise.concurrent</groupId>
@@ -715,30 +737,6 @@
 
             <!-- Optional APIs -->
             <dependency>
-                <groupId>jakarta.xml.bind</groupId>
-                <artifactId>jakarta.xml.bind-api</artifactId>
-                <version>${jakarta.xml.bind-api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.xml.bind</groupId>
-                <artifactId>jakarta.xml.bind-api</artifactId>
-                <version>${jakarta.xml.bind-api.version}</version>
-                <classifier>sources</classifier>
-                <optional>true</optional>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.xml.ws</groupId>
-                <artifactId>jakarta.xml.ws-api</artifactId>
-                <version>${jakarta.xml.ws-api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.xml.ws</groupId>
-                <artifactId>jakarta.xml.ws-api</artifactId>
-                <version>${jakarta.xml.ws-api.version}</version>
-                <classifier>sources</classifier>
-                <optional>true</optional>
-            </dependency>
-            <dependency>
                 <groupId>jakarta.jws</groupId>
                 <artifactId>jakarta.jws-api</artifactId>
                 <version>${jakarta.jws-api.version}</version>
@@ -747,18 +745,6 @@
                 <groupId>jakarta.jws</groupId>
                 <artifactId>jakarta.jws-api</artifactId>
                 <version>${jakarta.jws-api.version}</version>
-                <classifier>sources</classifier>
-                <optional>true</optional>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.xml.soap</groupId>
-                <artifactId>jakarta.xml.soap-api</artifactId>
-                <version>${jakarta.xml.soap-api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.xml.soap</groupId>
-                <artifactId>jakarta.xml.soap-api</artifactId>
-                <version>${jakarta.xml.soap-api.version}</version>
                 <classifier>sources</classifier>
                 <optional>true</optional>
             </dependency>
@@ -1071,6 +1057,16 @@
             <classifier>sources</classifier>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>jakarta.data</groupId>
+            <artifactId>jakarta.data-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.data</groupId>
+            <artifactId>jakarta.data-api</artifactId>
+            <classifier>sources</classifier>
+            <optional>true</optional>
+        </dependency>
 
         <!-- Full Platform -->
         <dependency>
@@ -1134,12 +1130,26 @@
         <dependency>
             <groupId>jakarta.authorization</groupId>
             <artifactId>jakarta.authorization-api</artifactId>
+
+            <exclusions>
+                <exclusion>
+                    <groupId>jakarta.servlet</groupId>
+                    <artifactId>jakarta.servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>jakarta.authorization</groupId>
             <artifactId>jakarta.authorization-api</artifactId>
             <classifier>sources</classifier>
             <optional>true</optional>
+
+            <exclusions>
+                <exclusion>
+                    <groupId>jakarta.servlet</groupId>
+                    <artifactId>jakarta.servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>jakarta.enterprise.concurrent</groupId>
@@ -1164,42 +1174,12 @@
 
         <!-- Optional APIs -->
         <dependency>
-            <groupId>jakarta.xml.bind</groupId>
-            <artifactId>jakarta.xml.bind-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.bind</groupId>
-            <artifactId>jakarta.xml.bind-api</artifactId>
-            <classifier>sources</classifier>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.ws</groupId>
-            <artifactId>jakarta.xml.ws-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.ws</groupId>
-            <artifactId>jakarta.xml.ws-api</artifactId>
-            <classifier>sources</classifier>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
             <groupId>jakarta.jws</groupId>
             <artifactId>jakarta.jws-api</artifactId>
         </dependency>
         <dependency>
             <groupId>jakarta.jws</groupId>
             <artifactId>jakarta.jws-api</artifactId>
-            <classifier>sources</classifier>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.soap</groupId>
-            <artifactId>jakarta.xml.soap-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.xml.soap</groupId>
-            <artifactId>jakarta.xml.soap-api</artifactId>
             <classifier>sources</classifier>
             <optional>true</optional>
         </dependency>
