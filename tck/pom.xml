@@ -31,9 +31,11 @@
     <name>Apache TomEE :: Jakarta EE 11 Full API :: Signature Tests</name>
 
     <properties>
-        <tck.file>jakarta-jakartaeetck-10.0.6.zip</tck.file>
-        <tck.url>https://download.eclipse.org/jakartaee/platform/10/${tck.file}</tck.url>
-        <tck.sha256>c3c7e37ceeb4073d3cbf70826563ea1c37ad85fd9ff180f7e3330e2cd73b934d</tck.sha256>
+        <tck.file>jakarta-jakartaeetck-11.0.1.zip</tck.file>
+        <tck.url>https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.1.zip</tck.url>
+        <tck.sha256>b2c0ad6db0514b75ff612dd7d855a3976c8ae9f240a3b690a684f61bf503bead</tck.sha256>
+        
+        <sigdir>${project.build.directory}/jakartaeetck/src/tcks/profiles/platform/signaturevalidation/src/main/java/com/sun/ts/tests/signaturetest</sigdir>
     </properties>
 
     <build>
@@ -115,7 +117,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.annotation.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.annotation.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.annotation.**</packages>
@@ -128,23 +130,23 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.batch.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.batch.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.batch.**</packages>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>check-jakarta-decorator</id>
+                        <id>check-jakarta-data</id>
                         <goals>
                             <goal>check</goal>
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.decorator.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.data.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
-                            <packages>jakarta.decorator.**</packages>
+                            <packages>jakarta.data.**</packages>
                         </configuration>
                     </execution>
                     <execution>
@@ -154,7 +156,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.ejb.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.ejb.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.ejb.**</packages>
@@ -167,7 +169,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.el.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.el.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.el.**</packages>
@@ -180,7 +182,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.enterprise.concurrent.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.enterprise.concurrent.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.enterprise.concurrent.**</packages>
@@ -193,7 +195,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.enterprise.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.enterprise.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.enterprise</packages>
@@ -207,25 +209,12 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.faces.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.faces.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.faces.**</packages>
                         </configuration>
                     </execution>-->
-                    <execution>
-                        <id>check-jakarta-inject</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <configuration>
-                            <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.inject.sig</sigfile>
-                            <action>strictcheck</action>
-                            <failOnError>true</failOnError>
-                            <packages>jakarta.inject.**</packages>
-                        </configuration>
-                    </execution>
                     <execution>
                         <id>check-jakarta-interceptor</id>
                         <goals>
@@ -233,7 +222,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.interceptor.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.interceptor.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.interceptor.**</packages>
@@ -246,7 +235,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.jms.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.jms.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.jms.**</packages>
@@ -259,7 +248,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.json.bind.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.json.bind.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.json.bind.**</packages>
@@ -272,7 +261,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.json.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.json.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.json</packages>
@@ -286,7 +275,7 @@
 <!--                        </goals>-->
 <!--                        <configuration>-->
 <!--                            <ignoreJDKClass>true</ignoreJDKClass>-->
-<!--                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.mail.sig</sigfile>-->
+<!--                            <sigfile>${sigdir}/jakarta.mail.sig</sigfile>-->
 <!--                            <action>strictcheck</action>-->
 <!--                            <failOnError>true</failOnError>-->
 <!--                            <packages>jakarta.mail.**</packages>-->
@@ -299,7 +288,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.persistence.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.persistence.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.persistence.**</packages>
@@ -312,7 +301,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.resource.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.resource.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.resource.**</packages>
@@ -325,7 +314,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.security.auth.message.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.security.auth.message.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.security.auth.message.**</packages>
@@ -338,7 +327,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.security.enterprise.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.security.enterprise.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.security.enterprise.**</packages>
@@ -351,7 +340,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.security.jacc.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.security.jacc.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.security.jacc.**</packages>
@@ -365,7 +354,7 @@
 <!--                        </goals>-->
 <!--                        <configuration>-->
 <!--                            <ignoreJDKClass>true</ignoreJDKClass>-->
-<!--                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.servlet.jsp.jstl.sig</sigfile>-->
+<!--                            <sigfile>${sigdir}/jakarta.servlet.jsp.jstl.sig</sigfile>-->
 <!--                            <action>strictcheck</action>-->
 <!--                            <failOnError>true</failOnError>-->
 <!--                            <packages>jakarta.servlet.jsp.jstl.**</packages>-->
@@ -378,7 +367,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.servlet.jsp.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.servlet.jsp.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.servlet.jsp.**</packages>
@@ -391,7 +380,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.servlet.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.servlet.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.servlet</packages>
@@ -404,7 +393,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.transaction.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.transaction.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.transaction.**</packages>
@@ -417,7 +406,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.validation.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.validation.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.validation.**</packages>
@@ -430,7 +419,7 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.websocket.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.websocket.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.websocket.**</packages>
@@ -443,52 +432,12 @@
                         </goals>
                         <configuration>
                             <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.ws.rs.sig</sigfile>
+                            <sigfile>${sigdir}/jakarta.ws.rs.sig</sigfile>
                             <action>strictcheck</action>
                             <failOnError>true</failOnError>
                             <packages>jakarta.ws.rs.**</packages>
                         </configuration>
                     </execution>
-                    <execution>
-                        <id>check-jakarta-xml-soap</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <configuration>
-                            <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.xml.soap.sig</sigfile>
-                            <action>strictcheck</action>
-                            <failOnError>true</failOnError>
-                            <packages>jakarta.xml.soap.**</packages>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>check-jakarta-xml-ws</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <configuration>
-                            <ignoreJDKClass>true</ignoreJDKClass>
-                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/jakarta.xml.ws.sig</sigfile>
-                            <action>strictcheck</action>
-                            <failOnError>true</failOnError>
-                            <packages>jakarta.xml.ws.**</packages>
-                        </configuration>
-                    </execution>
-                    <!-- CORBA Stuff not required for Web Profile ... -->
-<!--                    <execution>-->
-<!--                        <id>check-javax-rmi</id>-->
-<!--                        <goals>-->
-<!--                            <goal>check</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <ignoreJDKClass>true</ignoreJDKClass>-->
-<!--                            <sigfile>${project.build.directory}/jakartaeetck/src/com/sun/ts/tests/signaturetest/signature-repository/javax.rmi.sig</sigfile>-->
-<!--                            <action>strictcheck</action>-->
-<!--                            <failOnError>true</failOnError>-->
-<!--                            <packages>javax.rmi.**</packages>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
                 </executions>
             </plugin>
         </plugins>
