@@ -51,7 +51,6 @@
     <bundle>wrap:mvn:jakarta.jms/jakarta.jms-api/${jakarta.jms-api.version}</bundle>
     <bundle>wrap:mvn:jakarta.json.bind/jakarta.json.bind-api/${jakarta.json.bind-api.version}</bundle>
     <bundle>wrap:mvn:jakarta.json/jakarta.json-api/${jakarta.json-api.version}</bundle>
-    <bundle>wrap:mvn:jakarta.jws/jakarta.jws-api/${jakarta.jws-api.version}</bundle>
     <!-- From Geronimo
     <bundle>wrap:mvn:jakarta.mail/jakarta.mail-api/${jakarta.mail-api.version}</bundle>
     -->
@@ -73,9 +72,5 @@
     -->
     <bundle>wrap:mvn:org.apache.tomcat/tomcat-websocket-api/${tomcat.version}</bundle>
     <bundle>wrap:mvn:jakarta.ws.rs/jakarta.ws.rs-api/${jakarta.ws.rs-api.version}</bundle>
-    <bundle>wrap:mvn:jakarta.xml.bind/jakarta.xml.bind-api/${jakarta.xml.bind-api.version}</bundle>
-    <bundle>wrap:mvn:jakarta.xml.soap/jakarta.xml.soap-api/${jakarta.xml.soap-api.version}</bundle>
-    <bundle>wrap:mvn:jakarta.xml.ws/jakarta.xml.ws-api/${jakarta.xml.ws-api.version}</bundle>
-
   </feature>
 </features>
