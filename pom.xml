@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.apache</groupId>
     <artifactId>apache</artifactId>
-    <version>30</version>
+    <version>38</version>
     <relativePath /> <!--Resolve on repository-->
   </parent>
 
@@ -46,8 +46,7 @@
   </scm>
 
   <properties>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.release>17</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- Reproducible builds see https://maven.apache.org/guides/mini/guide-reproducible-builds.html -->
